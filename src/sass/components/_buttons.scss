@@ -1,6 +1,7 @@
 .btn {
   @include btn--basic(var(--color-yllw));
   font-weight: var(--font-bold);
+  font-size: 1.8rem;
   padding: 1.9rem 2.4rem;
   text-transform: capitalize;
 
