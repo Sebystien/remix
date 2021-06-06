@@ -1,2 +1,2 @@
-spackage-lock.json/
-node_modules/
+spackage-lock.json
+./src/node_modules
