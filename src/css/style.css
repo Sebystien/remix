@@ -1,0 +1,186 @@
+/*
+All our variables in here, we will be using the power of css Var to make it easier for us 
+to switch up the theme
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap");
+:root {
+  --color-yllw: hsl(48, 93%, 53%);
+  --color-yllw-02: hsl(52, 83%, 14%);
+  --color-neutral-00: hsl(0, 0%, 100%);
+  --color-neutral-01: hsl(0, 0%, 0%);
+  --color-neutral-02: hsl(236, 9%, 29%);
+  --color-text: #595959;
+  --font-bold: 700; }
+
+/*Breakpoint
+$breakpoint: (
+  "phone": "41.4rem",
+  "tablet": "76.8rem",
+  "desktop": "144rem",
+);
+
+*/
+/*
+basic styling for the buttons
+*/
+/*
+Let's reset everyhting in here
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+/*
+This is where we will find all the font related styling
+*/
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-size: 1.8rem;
+  color: var(--color-text); }
+
+p,
+a,
+span {
+  font-family: "Source Sans Pro", Helvetica, sans-serif; }
+
+h1,
+h2,
+h3,
+button {
+  font-family: "Space Grotesk"; }
+
+h1,
+h1,
+h3 {
+  line-height: 1.2;
+  color: var(--color-neutral-01); }
+
+.title--h1 {
+  font-size: 5.6rem; }
+
+::selection {
+  background: var(--color-yllw);
+  color: var(--color-neutral-01); }
+
+.flex {
+  display: flex; }
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  background: var(--color-yllw);
+  font-weight: var(--font-bold);
+  padding: 1.9rem 2.4rem;
+  text-transform: capitalize; }
+  .btn img {
+    margin-right: 1.6rem;
+    vertical-align: middle; }
+
+.row {
+  width: 90%;
+  margin: 0 auto; }
+
+.header__img img {
+  width: 100%; }
+
+.header__title {
+  margin-bottom: 3.2rem; }
+  .header__title span {
+    border: 1px solid var(--color-yllw);
+    border-radius: 5px;
+    padding: 0 0.8rem;
+    display: inline-block; }
+
+.header__paragraph {
+  margin-bottom: 2.4rem; }
+
+@media (min-width: 48rem) {
+  .header {
+    display: flex;
+    background: coral; }
+    .header__hero {
+      flex: 1;
+      background: lightblue; }
+    .header__img {
+      order: 1;
+      flex: 1; }
+      .header__img img {
+        width: 100%;
+        height: auto; } }
+
+.nav {
+  padding: 4rem 0;
+  justify-content: space-between;
+  align-items: center;
+  /*
+  ICON
+  */ }
+  .nav__burger {
+    background: lightblue;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    height: 2.4rem;
+    width: 6rem;
+    border-radius: 20px;
+    padding: 1.8rem 1rem; }
+    .nav__burger::selection > * {
+      background: transparent; }
+    @media (min-width: 41.4rem) {
+      .nav__burger {
+        display: none; } }
+  .nav__icon {
+    position: relative;
+    width: 100%; }
+    .nav__icon, .nav__icon::before, .nav__icon::after {
+      background: var(--color-neutral-01);
+      height: 0.3rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s; }
+    .nav__icon::before, .nav__icon::after {
+      position: absolute;
+      right: 0;
+      content: "";
+      width: 80%; }
+    .nav__icon::before {
+      top: 1rem; }
+    .nav__icon::after {
+      top: -1rem; }
+  .nav__icon.clicked {
+    background: transparent;
+    transform: translateX(-0.4rem); }
+    .nav__icon.clicked::before, .nav__icon.clicked::after {
+      top: 0; }
+    .nav__icon.clicked::before {
+      transform: rotate(45deg); }
+    .nav__icon.clicked::after {
+      transform: rotate(-45deg); }
+  .nav__navigation {
+    display: none; }
+    @media (min-width: 48rem) {
+      .nav__navigation {
+        display: flex; } }
+  .nav__actions {
+    display: none; }
+    @media (min-width: 48rem) {
+      .nav__actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; } }

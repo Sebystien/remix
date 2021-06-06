@@ -1,0 +1,45 @@
+.row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: $bigger-space;
+
+    span {
+      border: 1px solid var(--color-yllw);
+      border-radius: 5px;
+      padding: 0 0.8rem;
+      display: inline-block;
+    }
+  }
+
+  &__paragraph {
+    margin-bottom: $big-space;
+  }
+
+  @include responsive(tablet) {
+    display: flex;
+    background: coral;
+    &__hero {
+      flex: 1;
+      background: lightblue;
+    }
+    &__img {
+      order: 1;
+      flex: 1;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

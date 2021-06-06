@@ -1,0 +1,35 @@
+/*Breakpoint
+$breakpoint: (
+  "phone": "41.4rem",
+  "tablet": "76.8rem",
+  "desktop": "144rem",
+);
+
+*/
+
+@mixin responsive($size) {
+  @if $size == phone {
+    @media (min-width: 41.4rem) {
+      @content;
+    }
+  }
+  @if $size == tablet {
+    @media (min-width: 48rem) {
+      @content;
+    }
+  }
+  @if $size == desktop {
+    @media (min-width: 75rem) {
+      @content;
+    }
+  }
+}
+
+/*
+basic styling for the buttons
+*/
+@mixin btn--basic($color) {
+  border: none;
+  border-radius: 5px;
+  background: $color;
+}

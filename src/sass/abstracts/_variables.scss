@@ -1,0 +1,25 @@
+/*
+All our variables in here, we will be using the power of css Var to make it easier for us 
+to switch up the theme
+
+*/
+
+//Let's start with the light color first
+
+$mall-space: 0.8rem;
+$medium-space: 1.6rem;
+$big-space: 2.4rem;
+$bigger-space: 3.2rem;
+
+:root {
+  --color-yllw: hsl(48, 93%, 53%);
+  --color-yllw-02: hsl(52, 83%, 14%);
+
+  --color-neutral-00: hsl(0, 0%, 100%);
+  --color-neutral-01: hsl(0, 0%, 0%);
+  --color-neutral-02: hsl(236, 9%, 29%);
+
+  --color-text: #595959;
+
+  --font-bold: 700;
+}

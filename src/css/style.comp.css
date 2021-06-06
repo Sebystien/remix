@@ -1,0 +1,103 @@
+/*
+All our variables in here, we will be using the power of css Var to make it easier for us 
+to switch up the theme
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap");
+:root {
+  --color-yllw: hsl(48, 93%, 53%);
+  --color-yllw-02: hsl(52, 83%, 14%);
+  --color-neutral-00: hsl(0, 0%, 100%);
+  --color-neutral-01: hsl(0, 0%, 0%);
+  --color-neutral-02: hsl(236, 9%, 29%);
+  --color-text: #595959;
+  --font-bold: 700; }
+
+/*
+basic styling for the buttons
+*/
+/*
+Let's reset everyhting in here
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+/*
+This is where we will find all the font related styling
+*/
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-size: 1.8rem;
+  color: var(--color-text); }
+
+p,
+a,
+span {
+  font-family: "Source Sans Pro", Helvetica, sans-serif; }
+
+h1,
+h2,
+h3,
+button {
+  font-family: "Space Grotesk"; }
+
+h1,
+h1,
+h3 {
+  line-height: 1.2;
+  color: var(--color-neutral-01); }
+
+.title--h1 {
+  font-size: 5.6rem; }
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  background: var(--color-yllw);
+  font-weight: var(--font-bold);
+  padding: 1.9rem 2.4rem;
+  text-transform: capitalize; }
+  .btn img {
+    margin-right: 1.6rem;
+    vertical-align: middle; }
+
+.row {
+  width: 90%;
+  margin: 0 auto; }
+
+.flex {
+  display: flex; }
+
+.nav {
+  padding: 4rem 0; }
+
+.header__img img {
+  width: 100%; }
+
+.header__title {
+  margin-bottom: 3.2rem; }
+  .header__title span {
+    border: 1px solid var(--color-yllw);
+    border-radius: 5px;
+    padding: 0 0.8rem;
+    display: inline-block; }
+
+.header__paragraph {
+  margin-bottom: 2.4rem; }

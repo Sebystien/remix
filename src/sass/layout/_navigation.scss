@@ -1,0 +1,94 @@
+.nav {
+  padding: 4rem 0;
+  justify-content: space-between;
+  align-items: center;
+
+  //Burger
+  &__burger {
+    background: lightblue;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    height: 2.4rem;
+    width: 6rem;
+    border-radius: 20px;
+    padding: 1.8rem 1rem;
+
+    &::selection > * {
+      background: transparent;
+    }
+
+    //Media query
+    @include responsive(phone) {
+      display: none;
+    }
+  }
+
+  /*
+  ICON
+  */
+
+  &__icon {
+    position: relative;
+    width: 100%;
+
+    &,
+    &::before,
+    &::after {
+      background: var(--color-neutral-01);
+
+      height: 0.3rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      right: 0;
+      content: "";
+      width: 80%;
+    }
+
+    &::before {
+      top: 1rem;
+    }
+    &::after {
+      top: -1rem;
+    }
+  }
+
+  &__icon.clicked {
+    background: transparent;
+    transform: translateX(-0.4rem);
+
+    &::before,
+    &::after {
+      top: 0;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  //navigation
+  &__navigation {
+    display: none;
+    @include responsive(tablet) {
+      display: flex;
+    }
+  }
+  //links
+  &__actions {
+    display: none;
+    @include responsive(tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
