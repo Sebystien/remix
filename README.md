@@ -2,7 +2,7 @@
 
 Feel to check out my code and provide some feedback!
 
-### Connect with me:
+### Come say Hello!
 
 - [Dribbble](https://www.dribbble.com/sebystien)
 - [IG](https://www.instagram/officiallyseb)
