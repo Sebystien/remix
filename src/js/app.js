@@ -13,3 +13,13 @@ burger.addEventListener("click", (e) => {
     : burgerIcon.classList.add("clicked");
   console.log("testing");
 });
+
+window.addEventListener("resize", (e) => {
+  e.preventDefault();
+
+  if (window.innerWidth >= 768) {
+    burgerIcon.classList.remove("clicked");
+  }
+
+  console.log("it works");
+});

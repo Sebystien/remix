@@ -2,8 +2,9 @@
   padding: 4rem 0;
   justify-content: space-between;
   align-items: center;
-
-  //Burger
+  /********
+#### BURGER
+************/
   &__burger {
     background: lightblue;
     cursor: pointer;
@@ -75,20 +76,50 @@
     }
   }
 
-  //navigation
+  /********
+#### NAVIGATION
+************/
+
   &__navigation {
     display: none;
+
     @include responsive(tablet) {
       display: flex;
+      background: lightblue;
+      flex: 1;
     }
   }
-  //links
+
+  &__navigation li {
+    @include responsive(tablet) {
+      margin-left: $big-space;
+    }
+  }
+
+  //Nagivation links
+  &__links {
+    &:link,
+    &:visited {
+      color: var(--color-neutral-02);
+      font-family: "Space Grotesk";
+      font-weight: var(--font-medium);
+      text-transform: capitalize;
+    }
+  }
+  /********
+#### Actions icon and BTN
+************/
   &__actions {
     display: none;
     @include responsive(tablet) {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex: 1;
     }
   }
+
+  /********
+#### NAVIGATION
+************/
 }

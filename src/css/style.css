@@ -10,7 +10,9 @@ to switch up the theme
   --color-neutral-00: hsl(0, 0%, 100%);
   --color-neutral-01: hsl(0, 0%, 0%);
   --color-neutral-02: hsl(236, 9%, 29%);
-  --color-text: #595959;
+  --color-neutral-03: hsl(220, 18%, 97%);
+  --color-text: hsl(0, 0%, 35%);
+  --font-medium: 500;
   --font-bold: 700; }
 
 /*Breakpoint
@@ -56,7 +58,6 @@ body {
   color: var(--color-text); }
 
 p,
-a,
 span {
   font-family: "Source Sans Pro", Helvetica, sans-serif; }
 
@@ -89,15 +90,37 @@ h3 {
   font-weight: var(--font-bold);
   font-size: 1.8rem;
   padding: 1.9rem 2.4rem;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  cursor: pointer; }
   .btn img {
     margin-right: 1.6rem;
     vertical-align: middle; }
 
+.toggle {
+  background: lightcoral; }
+  .toggle__input {
+    display: none; }
+  .toggle__switch span img {
+    vertical-align: middle; }
+  .toggle__switch {
+    background: var(--color-neutral-03);
+    border-radius: 0.5rem;
+    padding: 1rem 1.2rem; }
+    .toggle__switch::before {
+      content: "";
+      position: absolute;
+      background: var(--color-neutral-00); }
+
+.moon {
+  display: inline-block;
+  background: yellow;
+  fill: red;
+  font-size: 20px; }
+
 .row {
   width: 90%;
   margin: 0 auto;
-  max-width: 114rem; }
+  max-width: 144rem; }
 
 .header__img img {
   width: 100%; }
@@ -131,9 +154,21 @@ h3 {
   padding: 4rem 0;
   justify-content: space-between;
   align-items: center;
+  /********
+#### BURGER
+************/
   /*
   ICON
-  */ }
+  */
+  /********
+#### NAVIGATION
+************/
+  /********
+#### Actions icon and BTN
+************/
+  /********
+#### NAVIGATION
+************/ }
   .nav__burger {
     background: lightblue;
     cursor: pointer;
@@ -178,11 +213,22 @@ h3 {
     display: none; }
     @media (min-width: 48rem) {
       .nav__navigation {
-        display: flex; } }
+        display: flex;
+        background: lightblue;
+        flex: 1; } }
+  @media (min-width: 48rem) {
+    .nav__navigation li {
+      margin-left: 2.4rem; } }
+  .nav__links:link, .nav__links:visited {
+    color: var(--color-neutral-02);
+    font-family: "Space Grotesk";
+    font-weight: var(--font-medium);
+    text-transform: capitalize; }
   .nav__actions {
     display: none; }
     @media (min-width: 48rem) {
       .nav__actions {
         display: flex;
         justify-content: space-between;
-        align-items: center; } }
+        align-items: center;
+        flex: 1; } }

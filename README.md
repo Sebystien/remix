@@ -1,6 +1,6 @@
 # Hey there! 👋
 
-Feel to check out my code and provide some feedback!
+Feel to check out my codes and provide some feedback!
 
 ### Come say Hello!
 

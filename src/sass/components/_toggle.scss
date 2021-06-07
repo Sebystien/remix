@@ -1,0 +1,31 @@
+.toggle {
+  background: lightcoral;
+
+  &__input {
+    display: none;
+  }
+
+  &__switch span {
+    img {
+      vertical-align: middle;
+    }
+  }
+  &__switch {
+    background: var(--color-neutral-03);
+    border-radius: 0.5rem;
+    padding: 1rem 1.2rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: var(--color-neutral-00);
+    }
+  }
+}
+
+.moon {
+  display: inline-block;
+  background: yellow;
+  fill: red;
+  font-size: 20px;
+}
