@@ -5,6 +5,7 @@
 }
 
 .header {
+  margin-bottom: 8rem;
   &__img {
     img {
       width: 100%;
@@ -28,10 +29,10 @@
 
   @include responsive(tablet) {
     display: flex;
-    background: coral;
+
     &__hero {
       flex: 1;
-      background: lightblue;
+      align-self: center;
     }
     &__img {
       order: 1;
@@ -43,4 +44,10 @@
       }
     }
   }
+}
+
+
+
+.section--img{
+  width: 100%;
 }

@@ -23,3 +23,19 @@ window.addEventListener("resize", (e) => {
 
   console.log("it works");
 });
+
+/* 
+Toggle
+*/
+
+const toggle = document.querySelector(".toggle__input");
+
+toggle.addEventListener("change", (e) => {
+  e.preventDefault();
+  if (e.target.checked) {
+    document.body.setAttribute("data-color", "dark");
+  } else {
+    document.body.removeAttribute("data-color");
+  }
+  console.log("different color");
+});

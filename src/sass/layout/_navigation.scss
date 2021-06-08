@@ -6,7 +6,7 @@
 #### BURGER
 ************/
   &__burger {
-    background: lightblue;
+    background: hsl(235, 9%, 95%);
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -18,11 +18,13 @@
     &::selection > * {
       background: transparent;
     }
-
-    //Media query
-    @include responsive(phone) {
+    
+    @include responsive(tab-land){
       display: none;
     }
+    
+
+    
   }
 
   /*
@@ -83,15 +85,15 @@
   &__navigation {
     display: none;
 
-    @include responsive(tablet) {
+    @include responsive(tab-land) {
       display: flex;
-      background: lightblue;
       flex: 1;
+     
     }
   }
 
   &__navigation li {
-    @include responsive(tablet) {
+    @include responsive(tab-land) {
       margin-left: $big-space;
     }
   }
@@ -111,7 +113,8 @@
 ************/
   &__actions {
     display: none;
-    @include responsive(tablet) {
+    background-color: aliceblue;
+    @include responsive(tab-land) {
       display: flex;
       justify-content: space-between;
       align-items: center;

@@ -6,6 +6,10 @@
   }
 
   &__switch span {
+    font-family: "Space Grotesk";
+    position: relative;
+    z-index: 1;
+
     img {
       vertical-align: middle;
     }
@@ -13,19 +17,25 @@
   &__switch {
     background: var(--color-neutral-03);
     border-radius: 0.5rem;
-    padding: 1rem 1.2rem;
+    padding: 1.9rem 2.4rem;
+
+    position: relative;
 
     &::before {
       content: "";
       position: absolute;
-      background: var(--color-neutral-00);
+      left: rem;
+      top: 20%;
+
+      width: 9rem;
+      height: 4rem;
+      box-shadow: 0 2px 0 var(--color-neutral-01);
+      border-radius: 0.5rem;
+      transition: all 0.4s;
     }
   }
-}
 
-.moon {
-  display: inline-block;
-  background: yellow;
-  fill: red;
-  font-size: 20px;
+  &__input:checked + &__switch::before {
+    transform: translateX(10rem);
+  }
 }

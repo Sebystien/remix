@@ -11,9 +11,11 @@ $medium-space: 1.6rem;
 $big-space: 2.4rem;
 $bigger-space: 3.2rem;
 
-:root {
+:root,
+[data-color="light"] {
   --color-yllw: hsl(48, 93%, 53%);
   --color-yllw-02: hsl(52, 83%, 14%);
+  --color-bg: hsl(0, 0%, 100%);
 
   --color-neutral-00: hsl(0, 0%, 100%);
   --color-neutral-01: hsl(0, 0%, 0%);
@@ -24,4 +26,8 @@ $bigger-space: 3.2rem;
 
   --font-medium: 500;
   --font-bold: 700;
+}
+
+[data-color="dark"] {
+  --color-bg: hsl(223, 10%, 13%);
 }

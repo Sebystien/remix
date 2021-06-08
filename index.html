@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
   </head>
-  <body>
+  <body data-color="light">
     <nav class="nav row flex">
       <!--Nav logo-->
       <div class="nav__logo">
@@ -28,8 +28,8 @@
 
       <!--Nav links-->
       <ul class="nav__navigation">
-        <li><a href="/" class="nav__links">product</a></li>
-        <li><a href="/" class="nav__links">pricing</a></li>
+        <li><a href="#product" class="nav__links">product</a></li>
+        <li><a href="#pricing" class="nav__links">pricing</a></li>
         <li><a href="/" class="nav__links">for sketch</a></li>
       </ul>
 
@@ -39,21 +39,10 @@
         <div class="nav__toggle toggle">
           <input type="checkbox" id="toggle" class="toggle__input" />
           <label for="toggle" class="toggle__switch">
+            <span class="toggle__select"></span>
             <span> <img src="./Assets/Light.svg" alt="Light" /> Light </span>
             <span>
-              <svg
-                width="21"
-                height="22"
-                viewBox="0 0 21 22"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16.2628 16.1162C12.4326 18.3275 7.63635 17.0962 5.54505 13.474C3.45375 9.85174 4.78553 5.08236 8.6157 2.87101C9.08714 2.59882 9.57617 2.38595 10.0876 2.21458C9.88986 3.00709 9.82613 3.89964 9.87341 4.80961C9.97248 6.71611 10.5678 8.85359 11.6602 10.543C12.6182 12.0246 13.9288 13.4244 15.3695 14.3433C16.0267 14.7625 16.7473 15.1026 17.4946 15.2873C17.117 15.5847 16.7007 15.8634 16.2628 16.1162Z"
-                  stroke="#595959"
-                  stroke-width="2"
-                />
-              </svg>
+              <img src="./Assets/moon.svg" alt="" />
               Dark
             </span>
           </label>
@@ -92,6 +81,76 @@
         </button>
       </div>
     </header>
+
+
+    <!--
+
+    ############# MAIN
+
+    -->
+
+    <main class="container row" role="main">
+      <section class="section__intro" id="product">
+       <div class="section__intro--top">
+        <h2 class="section__title title--h2">Collaborations has never been easier.</h2>
+        <p class="section__paragraph p--section">
+          With Remix, you will be able to actively collaborate with developers in real-time. No more back-and-forth emails and Slack messages to get that design perfect.
+        </p>
+        <a href="#" class="link">learn more &#8594;</a>
+
+       </div>
+
+       <div class="section__intro--bottom">
+         <img src="./Assets/Collaboration.png" alt="Collab" class="section--img">
+       </div>
+
+      </section>
+
+      <!--Testimonials -->
+       
+      <section class="section__reviews">
+        <div class="section__reviews--top">
+          <h2 class="section__title title--h2">What our users say</h2>
+          <p class="section__paragraph p--section">
+            We have cultivated a growing community for developers, and that matters to us. See what our users are saying.
+          </p>
+        </div>
+        <div class="section__reviews--bottom"></div>
+
+      </section>
+
+      <!--Sign up-->
+      <sectiom class="section__subscribe">
+        <div class="section__subscribe--top">
+          <p class="section__paragraph p--section">
+            A guide with 120+ hours worth of content to guide you on how to perfectly hand over your designs to your developers. Best part? It’s completely free.
+          </p>
+          <div class="section__box">
+           <form action="#" class="section__form">
+            <input type="text" name="subscribe" required placeholder="johndoe@email.com">
+            <button type="submit" class="">Send me the Guide</button>
+           </form>
+          </div>
+      
+        </div>
+        <div class="section__subscribe--bottom">
+         <img src="./Assets/Illustrations.png" alt="" class="section--img">
+
+        </div>
+      </sectiom>
+
+    </main>
+
+
+     <!--
+
+    ############# Footer
+
+
+    -->
+    <footer class="footer">
+    <div class="footer__credrits"></div>
+    </footer>
 
     <svg class="figma">
       <use

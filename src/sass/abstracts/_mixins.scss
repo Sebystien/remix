@@ -2,6 +2,7 @@
 $breakpoint: (
   "phone": "41.4rem",
   "tablet": "76.8rem",
+  "tab-land":"";
   "desktop": "144rem",
 );
 
@@ -9,7 +10,7 @@ $breakpoint: (
 
 @mixin responsive($size) {
   @if $size == phone {
-    @media (min-width: 41.4rem) {
+    @media (min-width: 40rem) {
       @content;
     }
   }
@@ -18,8 +19,13 @@ $breakpoint: (
       @content;
     }
   }
-  @if $size == desktop {
+  @if $size == tab-land {
     @media (min-width: 75rem) {
+      @content;
+    }
+  }
+  @if $size == desktop {
+    @media (min-width: 90rem) {
       @content;
     }
   }
