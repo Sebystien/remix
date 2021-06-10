@@ -166,9 +166,10 @@ h3 {
   width: 100%; }
 
 .nav {
-  padding: 4rem 0;
+  padding: 2rem 0;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   /********
 #### BURGER
 ************/
@@ -176,7 +177,7 @@ h3 {
   ICON
   */
   /********
-#### NAVIGATION
+#### NAVIGATION IS DESIGNED IN DESTOP FIRST APPROACHED
 ************/
   /********
 #### Actions icon and BTN
@@ -184,15 +185,20 @@ h3 {
   /********
 #### NAVIGATION
 ************/ }
+  @media (min-width: 75rem) {
+    .nav {
+      padding: 4rem 0; } }
+  @media (max-width: 1200px) {
+    .nav {
+      position: relative; } }
   .nav__burger {
     background: #f1f1f3;
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    height: 2.4rem;
-    width: 6rem;
+    width: 5rem;
     border-radius: 20px;
-    padding: 1.8rem 1rem; }
+    padding: 1.6rem .8rem; }
     .nav__burger::selection > * {
       background: transparent; }
     @media (min-width: 75rem) {
@@ -203,7 +209,7 @@ h3 {
     width: 100%; }
     .nav__icon, .nav__icon::before, .nav__icon::after {
       background: var(--color-neutral-01);
-      height: 0.3rem;
+      height: 0.2rem;
       border-radius: 0.5rem;
       transition: all 0.3s; }
     .nav__icon::before, .nav__icon::after {
@@ -225,19 +231,29 @@ h3 {
     .nav__icon.clicked::after {
       transform: rotate(-45deg); }
   .nav__navigation {
-    display: none; }
-    @media (min-width: 75rem) {
+    display: flex;
+    flex: 1; }
+    @media (max-width: 1200px) {
       .nav__navigation {
-        display: flex;
-        flex: 1; } }
-  @media (min-width: 75rem) {
-    .nav__navigation li {
-      margin-left: 2.4rem; } }
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 6rem;
+        right: -100%;
+        width: 0;
+        background: dodgerblue; } }
+  .nav__navigation li {
+    margin-left: 2.4rem; }
+    @media (max-width: 1200px) {
+      .nav__navigation li {
+        display: block;
+        margin: 2.4rem 0; } }
   .nav__links:link, .nav__links:visited {
     color: var(--color-neutral-02);
     font-family: "Space Grotesk";
     font-weight: var(--font-medium);
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    display: block; }
   .nav__actions {
     display: none;
     background-color: aliceblue; }
@@ -247,3 +263,8 @@ h3 {
         justify-content: space-between;
         align-items: center;
         flex: 1; } }
+
+@media (max-width: 1200px) {
+  .nav__active {
+    right: 0;
+    width: 100%; } }
