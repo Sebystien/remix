@@ -21,7 +21,7 @@ burger.addEventListener("click", (e) => {
 window.addEventListener("resize", (e) => {
   e.preventDefault();
 
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth >= 1200) {
     burgerIcon.classList.remove("clicked");
     nav.classList.remove('nav__active');
   }
@@ -30,7 +30,7 @@ window.addEventListener("resize", (e) => {
 });
 
 /* 
-Toggle
+Toggle for theme switcher
 */
 
 const adjustElement = (colorChecker)=>{
