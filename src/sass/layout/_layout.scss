@@ -48,7 +48,96 @@
 }
 
 
+/**************************
+main
+***************************/
+.section{
+  
 
-.section--img{
-  width: 100%;
+  //This will keep the images from the section to overlap
+  &--img{
+    width: 100%;
+    
+  }
+
+  /*
+   TESTIMONIALS
+  */
+
+  &__intro{
+    margin-bottom: 8rem;
+
+    &-paragraph{
+      margin-bottom: $big-space;
+    }
+    &-link{
+      text-decoration: solid;
+      text-transform: capitalize;
+      font-weight: 600;
+      margin-bottom: $bigger-space;
+      display: block;
+      
+      &:link,
+      &:visited{
+        color: var(--color-neutral-01);
+        
+      }
+    }
+  }
+
+
+  /*
+   SUBSCRIBE
+  */
+
+  &__subscribe{
+    background-color: var(--color-yllw);
+    padding-top: 6.4rem ;
+  }
+
+  &__form{
+    &>*{
+      display: block;
+      width: 100%;
+    }
+    & :first-child{
+      margin-bottom: $small-space;
+    }
+  }
+
+  
+}
+
+/**************************
+FOOTER
+***************************/
+
+.footer{
+  background-color: var(--color-yllw);
+  color: var(--color-yllw-02);
+  
+  &__credits{
+    width: 100%;
+    background-color: var(--color-yllw-02);
+    padding: 1rem 0;
+    color: var(--color-yllw);
+
+
+    
+  }
+
+  &__flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div{
+      
+      &>*{
+        margin-left:1.6rem ;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
 }

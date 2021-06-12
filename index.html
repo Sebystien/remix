@@ -92,14 +92,14 @@
 
     -->
 
-    <main class="container row" role="main">
-      <section class="section__intro" id="product">
+    <main class="container" role="main">
+      <section class="section__intro row" id="product">
        <div class="section__intro--top">
         <h2 class="section__title title--h2">Collaborations has never been easier.</h2>
-        <p class="section__paragraph p--section">
+        <p class="section__intro-paragraph p--section">
           With Remix, you will be able to actively collaborate with developers in real-time. No more back-and-forth emails and Slack messages to get that design perfect.
         </p>
-        <a href="#" class="link">learn more &#8594;</a>
+        <a href="#" class="section__intro-link link">learn more &#8594;</a>
 
        </div>
 
@@ -111,7 +111,7 @@
 
       <!--Testimonials -->
        
-      <section class="section__reviews">
+      <section class="section__reviews row">
         <div class="section__reviews--top">
           <h2 class="section__title title--h2">What our users say</h2>
           <p class="section__paragraph p--section">
@@ -124,14 +124,18 @@
 
       <!--Sign up-->
       <section class="section__subscribe">
+       <div class="row">
         <div class="section__subscribe--top">
-          <p class="section__paragraph p--section">
-            A guide with 120+ hours worth of content to guide you on how to perfectly hand over your designs to your developers. Best part? It’s completely free.
+          <h2 class="section__title title--h2">Get the Ultimate Developer Hand Off Guide</h2>
+          <p class="section__paragraph p--section p--section-subs">
+            A guide with 120+ hours worth of content to guide you on how to 
+            perfectly hand over your designs to your developers. 
+            Best part? It’s completely free.
           </p>
           <div class="section__box">
            <form action="#" class="section__form">
             <input type="text" name="subscribe" required placeholder="johndoe@email.com">
-            <button type="submit" class="">Send me the Guide</button>
+            <button type="submit" class="btn--submit">Send me the Guide</button>
            </form>
           </div>
       
@@ -140,23 +144,61 @@
          <img src="./Assets/Illustrations.png" alt="" class="section--img">
 
         </div>
+       </div>
       </section>
 
        <!--Pricing-->
-       <section class="section__pricing">
+       <section class="section__pricing pricing">
          <div class="row">
-           <div class="pricing">
-             <h3>basic</h3>
+
+           <!--Table-->
+
+           <div class="pricing__box">
+             <h3 class="pricing__tiers title--h3">basic</h3>
              <h2>$39 <span>/mo</span></h2>
-             <p>Suited for small teams with minimal developer handoffs</p>
-             <ul>
-               <li><img src="./Assets/Checkmark.svg" alt="">Web & Figma Plugin</li>
-               <li><img src="./Assets/Checkmark.svg" alt="">Web & Figma Plugin</li>
-               <li><img src="./Assets/Checkmark.svg" alt="">Web & Figma Plugin</li>
-               <li><img src="./Assets/Checkmark.svg" alt="">Web & Figma Plugin</li>
+             <p class="pricing__description p--section">Suited for small teams with minimal developer handoffs</p>
+             <ul class="pricing_list">
+               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">Web access only.</li>
+               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">20 handoffs per month.</li>
+               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">2 members.</li>
+               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">Offline editing only.</li>
              </ul>
-             <button>Subscribe</button>
+             <button class="btn--pricing btn ">Subscribe</button>
            </div>
+
+            <!--Table-->
+
+            <div class="pricing__bo pricing__box--starter">
+              <h3 class="pricing_tiers title--h3">starter</h3>
+              <h2>$59 <span>/mo</span></h2>
+              <p class="pricing__description p--section">Suited for medium businesses with a lof of handoffs</p>
+              <ul class="pricing_list">
+                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">Web and Figma Plugin</li>
+                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">60 handoffs per month.</li>
+                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">4 members.</li>
+                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">Live editing.</li>
+              </ul>
+              <button class="btn--pricing btn ">Subscribe</button>
+            </div>
+
+             <!--Table-->
+
+           <div class="pricing__box">
+            <h3 class="pricing_tiers title--h3">Pro</h3>
+            <h2>$129 <span>/mo</span></h2>
+            <p class="pricing__description p--section">Suited for small teams with minimal developer handoffs</p>
+            <ul class="pricing_list">
+              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">Web and Figma Plugin</li>
+              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">500+ Handoffs per month.</li>
+              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">Unlimited members.</li>
+              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">Live editing.</li>
+            </ul>
+            <button class="btn--pricing btn ">Subscribe</button>
+          </div>
+
+ 
+
+
          </div>
        </section>
 
@@ -168,7 +210,66 @@
     ############# Footer    
     -->
     <footer class="footer">
-    <div class="footer__credrits"></div>
+      <div class="footer__description row">
+        <img src="./Assets/Footer-logo.svg" alt="Remix">
+        Remix is a Figma and Sketch plugin that was made with Developers in mind. 
+        Create custom React components in seconds, 
+        copy CSS code in one click, and export your assets effortlessly.
+      </div>
+
+   
+     
+    <div class="footer__navigation row">
+    <!--Nav-->
+    <div class="footer__nav">
+      <h3 class="footer__nav-title h3--nav-title">Supported</h3>
+      <ul class="footer__nav-items">
+        
+        <li class="footer__nav-list"><a href="/" class="footer__nav-links">Sketch</a></li>
+        <li class="footer__nav-list"><a href="/" class="footer__nav-links">Figma</a></li>
+        
+      </ul>
+    </div>
+
+     <!--Nav-->
+     <div class="footer__nav">
+      <h3 class="footer__nav-title h3--nav-title">Developers</h3>
+      <ul class="footer__nav-items">
+        
+        <li class="footer__nav-list"><a href="/" class="footer__nav-links">API</a></li>
+        <li class="footer__nav-list"><a href="/" class="footer__nav-links">Documentation</a></li>
+        
+      </ul>
+    </div>
+
+     <!--Nav-->
+     <div class="footer__nav">
+      <h3 class="footer__nav-title h3--nav-title">Company</h3>
+      <ul class="footer__nav-items">
+        
+        <li class="footer__nav-list"><a href="/" class="footer__nav-links">Career</a></li>
+        <li class="footer__nav-list"><a href="/" class="footer__nav-links">Support</a></li>
+        <li class="footer__nav-list"><a href="/" class="footer__nav-links">Culture</a></li>
+        
+      </ul>
+    </div>
+
+
+
+    </div>
+    <div class="footer__credits">
+      <div class="row footer__flex">
+        <p class="footer__paragraph p--footer">
+          &copy; Remix 2021
+        </p>
+        <div>
+          <a href="footer__credit--link">support@remix.com</a>
+          <img src="/Assets/Twitter.svg" alt="Check us out">
+          <img src="/Assets/Facebook.svg" alt="Check us out">
+          
+        </div>
+      </div>
+    </div>
     </footer>
 <!--Sign up
     <svg class="figma">

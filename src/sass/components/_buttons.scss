@@ -10,4 +10,13 @@
     margin-right: 1.6rem;
     vertical-align: middle;
   }
+
+  &--submit{
+    background: var(--color-yllw-02);
+    border: none;
+    color: var(--color-neutral-00);
+    font-size: 1.8rem;
+    padding: 1.8rem 0;
+    border-radius: .5rem;
+  }
 }

@@ -97,6 +97,7 @@
       display: flex;
       
       flex: 1;
+      display: none;
  
     @media (max-width: 1200px){
       
@@ -115,11 +116,10 @@
     margin-left: $big-space;
   
     @media (max-width: 1200px){
-      
-     
+    
     
      display: block;
-     margin: 2.4rem 0;
+     margin: 4rem 0;
     }
   }
 
@@ -137,15 +137,12 @@
 
   //Background
   &__bg{
-    position: absolute;
+    display: none;
     background: lightblue;
-    width: 2.6rem;
-    height: 2.6rem;
-    right: 0;
-    top: 0;
-    border-radius: 50%;
-   transform: scale(1000);
-   
+    width: 100%;
+    height:100%;
+    
+  // transform: scale(1000);
    z-index: 1;
   }
   
