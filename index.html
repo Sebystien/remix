@@ -114,11 +114,79 @@
       <section class="section__reviews row">
         <div class="section__reviews--top">
           <h2 class="section__title title--h2">What our users say</h2>
-          <p class="section__paragraph p--section">
+          <p class="section__paragraph p--section section__reviews-p">
             We have cultivated a growing community for developers, and that matters to us. See what our users are saying.
           </p>
+
+          <div class="rating">
+            <h4 class="rating__numbers">5.0 <span class="rating__light">Rating</span> </h2>
+            <img src="./Assets/Star.png" alt="Reviews" class="rating__img">
+           
+
+          </div>
+          
+          <div class="section__reviews-counter">
+            <h4 class="rating__numbers"> 2400+<span class="rating__light"> Developers</span></h2>
+            <div class="avatar">
+          
+              <div class="avatar__container"><img src="./Assets/useravatar06.png" alt="User" class="avatar__img avatar__img--6"></div>
+              <div class="avatar__container"> <img src="./Assets/useravatar05.png" alt="User" class="avatar__img avatar__img--5"></div>
+              <div class="avatar__container"> <img src="./Assets/useravatar04.png" alt="User" class="avatar__img avatar__img--4"></div>
+              <div class="avatar__container"> <img src="./Assets/useravatar03.png" alt="User" class="avatar__img avatar__img--3"></div>
+              <div class="avatar__container"> <img src="./Assets/useravatar02.png" alt="User" class="avatar__img avatar__img--2"></div>
+              <div class="avatar__container"><img src="./Assets/useravatar01.png" alt="User" class="avatar__img avatar__img--1"></div>
+           
+            </div>
+  
+           
+  
+          </div>
         </div>
-        <div class="section__reviews--bottom"></div>
+
+        <!-- COMMENT -->
+
+        <div class="section__reviews--bottom">
+
+
+         <figure class="testimonials testimonials__first">
+          <img src="./Assets/testimonials1.png" alt="" class="testimonials__img">
+          <blockquote class="testimonials__quote">
+          
+            Developers, you no longer need to spend hours translating designs.
+          </blockquote>
+          <figcaption class="testimonials__name">
+            Jesse Handricks
+            <div class="testimonials__stars">
+              <img src="./Assets/Star.png" alt="Stars">
+              <img src="./Assets/Star.png" alt="Stars">
+              <img src="./Assets/Star.png" alt="Stars">
+              <img src="./Assets/Star.png" alt="Stars">
+              <img src="./Assets/Star.png" alt="Stars">
+            </div>
+          </figcaption>
+         </figure>
+
+
+         <!--Second Comment-->
+         <figure class="testimonials testimonials__second">
+          <img src="./Assets/testimonial2.png" alt="" class="testimonials__img">
+          <blockquote class="testimonials__quote">
+          Remix has been a life saver when it comes to developer hand off.
+            
+          </blockquote>
+          <figcaption class="testimonials__name">
+            Mia Andrews
+            <div class="testimonials__stars">
+              <img src="./Assets/Star.png" alt="Stars">
+              <img src="./Assets/Star.png" alt="Stars">
+              <img src="./Assets/Star.png" alt="Stars">
+              <img src="./Assets/Star.png" alt="Stars">
+              <img src="./Assets/Star.png" alt="Stars">
+            </div>
+          </figcaption>
+         </figure>
+      
+        </div>
 
       </section>
 
@@ -134,7 +202,7 @@
           </p>
           <div class="section__box">
            <form action="#" class="section__form">
-            <input type="text" name="subscribe" required placeholder="johndoe@email.com">
+            <input type="email" class="section__form-field" name="subscribe" required placeholder="johndoe@email.com">
             <button type="submit" class="btn--submit">Send me the Guide</button>
            </form>
           </div>
@@ -155,43 +223,52 @@
 
            <div class="pricing__box">
              <h3 class="pricing__tiers title--h3">basic</h3>
-             <h2>$39 <span>/mo</span></h2>
+             <h2 class="pricing__price">
+              <span class="pricing__price--price">$39</span>
+               <span class="pricing__price--month">/mo</span>
+            </h2>
              <p class="pricing__description p--section">Suited for small teams with minimal developer handoffs</p>
              <ul class="pricing_list">
-               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">Web access only.</li>
-               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">20 handoffs per month.</li>
-               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">2 members.</li>
-               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">Offline editing only.</li>
+               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark" >Web access only.</li>
+               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">20 handoffs per month.</li>
+               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">2 members.</li>
+               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Offline editing only.</li>
              </ul>
              <button class="btn--pricing btn ">Subscribe</button>
            </div>
 
             <!--Table-->
 
-            <div class="pricing__bo pricing__box--starter">
-              <h3 class="pricing_tiers title--h3">starter</h3>
-              <h2>$59 <span>/mo</span></h2>
+            <div class="pricing__box pricing__box--starter">
+              <h3 class="pricing__tiers title--h3">starter</h3>
+              <h2 class="pricing__price">
+                <span class="pricing__price--price">$59</span>
+                 <span class="pricing__price--month">/mo</span>
+              </h2>
               <p class="pricing__description p--section">Suited for medium businesses with a lof of handoffs</p>
               <ul class="pricing_list">
-                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">Web and Figma Plugin</li>
-                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">60 handoffs per month.</li>
-                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">4 members.</li>
-                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">Live editing.</li>
+                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Web & Figma Plugin</li>
+                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">60 handoffs per month.</li>
+                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">4 members.</li>
+                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Live editing.</li>
               </ul>
-              <button class="btn--pricing btn ">Subscribe</button>
+              <button class="btn--pricing btn">Subscribe</button>
             </div>
 
              <!--Table-->
 
            <div class="pricing__box">
-            <h3 class="pricing_tiers title--h3">Pro</h3>
-            <h2>$129 <span>/mo</span></h2>
+            <h3 class="pricing__tiers title--h3">Pro</h3>
+            <h2 class="pricing__price">
+              <span class="pricing__price--price">$129</span>
+               <span class="pricing__price--month">/mo</span>
+            </h2>
             <p class="pricing__description p--section">Suited for small teams with minimal developer handoffs</p>
             <ul class="pricing_list">
-              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">Web and Figma Plugin</li>
-              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">500+ Handoffs per month.</li>
-              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">Unlimited members.</li>
-              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" alt="Checkmark">Live editing.</li>
+              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">500+ Handoffs per month.</li>
+              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Unlimited members.</li>
+              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Live editing.</li>
+              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Web and Figma Plugin</li>
             </ul>
             <button class="btn--pricing btn ">Subscribe</button>
           </div>
@@ -211,11 +288,14 @@
     -->
     <footer class="footer">
       <div class="footer__description row">
-        <img src="./Assets/Footer-logo.svg" alt="Remix">
-        Remix is a Figma and Sketch plugin that was made with Developers in mind. 
-        Create custom React components in seconds, 
-        copy CSS code in one click, and export your assets effortlessly.
-      </div>
+        <img src="./Assets/Footer-logo.svg" alt="Remix" class="footer__logo">
+        <p class="footer__text">
+          Remix is a Figma and Sketch plugin that was made with Developers in mind. 
+          Create custom React components in seconds, 
+          copy CSS code in one click, and export your assets effortlessly.
+       
+        </p>
+        </div>
 
    
      
@@ -254,16 +334,15 @@
       </ul>
     </div>
 
-
-
     </div>
+
     <div class="footer__credits">
       <div class="row footer__flex">
         <p class="footer__paragraph p--footer">
           &copy; Remix 2021
         </p>
         <div>
-          <a href="footer__credit--link">support@remix.com</a>
+          <a href="/" class="footer__credits--link">support@remix.com</a>
           <img src="/Assets/Twitter.svg" alt="Check us out">
           <img src="/Assets/Facebook.svg" alt="Check us out">
           

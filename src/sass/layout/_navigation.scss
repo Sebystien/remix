@@ -95,9 +95,8 @@
 
   &__navigation {
       display: flex;
-      
       flex: 1;
-      display: none;
+      overflow-x: hidden;
  
     @media (max-width: 1200px){
       
@@ -105,10 +104,11 @@
       align-items: center;
       position: absolute;
       top: 6rem;
-      right: -100%;
+      right: 0;
       width: 0;
-      background: dodgerblue;
+      background-color: var(--color-neutral-00);
       z-index: 20;
+      transition: all .3s;
     }
   }
 

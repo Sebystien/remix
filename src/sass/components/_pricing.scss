@@ -1,0 +1,86 @@
+
+
+
+ /*
+   SUBSCRIBE
+  */
+.pricing{
+    padding: 4rem 0 12rem;
+    
+
+    h2,h3,li{
+        font-family:"Space Grotesk";
+        
+    }
+
+    h3,li{
+        text-transform: capitalize;
+    }
+
+   
+    
+
+    &__box{
+        padding: 3.6rem;
+        border-radius: .8rem;
+
+
+        &:not(:last-child){
+            margin-bottom: 4rem;
+        }
+      
+        &--starter{
+            h3{
+                color: var(--color-neutral-04);
+            }
+        background: var(--color-neutral-02);
+        color: var(--color-neutral-04);
+        }
+    }
+
+ 
+   &__tiers{
+       font-weight: 400;
+       font-size: 1.8rem;
+      
+   }
+
+  
+
+   &__price{
+       margin-bottom: $small-space;
+
+       &--price{
+        font-size: 5.6rem;
+        font-weight: 500;
+        font-family:'Space Grotesk' ;
+       }
+       &--month{
+           font-size: 1.8rem ;
+           font-weight: 400;
+       }
+   }
+
+   &__description{
+       margin-bottom: $big-space;
+   }
+
+   &__list{
+
+    &--items{
+        margin-bottom: $medium-space;
+        font-weight: 400;
+    }
+   }
+
+   &__img{
+       margin-right: $medium-space;
+       vertical-align: middle;
+   }
+
+
+
+
+
+
+}

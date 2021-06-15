@@ -61,7 +61,7 @@ main
   }
 
   /*
-   TESTIMONIALS
+   intro
   */
 
   &__intro{
@@ -85,6 +85,42 @@ main
     }
   }
 
+  /*
+   TESTIMONIALS
+  */
+
+  &__reviews{
+    margin-bottom: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+
+    @include responsive(tablet){
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__reviews--top{
+    margin-bottom: 3.2rem;
+  }
+  
+  //Will set the box to flex so we can position them 
+  &__reviews--bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+  }
+
+  &__reviews-counter{
+    display: flex;
+    //vertical-align: middle;
+  }
+
+  &__reviews-p{
+    margin-bottom: $medium-space;
+  }
+
 
   /*
    SUBSCRIBE
@@ -95,14 +131,39 @@ main
     padding-top: 6.4rem ;
   }
 
+  &__subscribe--bottom{
+   img{
+     transform: translateY(.9rem);
+   }
+  }
+
   &__form{
+    margin-bottom: $bigger-space;
     &>*{
       display: block;
       width: 100%;
     }
     & :first-child{
       margin-bottom: $small-space;
+      color: var(--color-yllw-02);
+      padding: 1.8rem 0 1.8rem 3.6rem;
+      border: none;
+      border-radius: .5rem;
+     
     }
+
+    &-field::placeholder{
+      color: var(--color-yllw-02);
+      
+    }
+     
+    &-field:focus{
+      outline: none;
+    }
+
+
+
+
   }
 
   
@@ -113,18 +174,87 @@ FOOTER
 ***************************/
 
 .footer{
+  padding-top: 2rem;
   background-color: var(--color-yllw);
   color: var(--color-yllw-02);
+ 
+
+  &__text{
+   
+    width: 95%;
+  }
+
+  &__logo{
+    display: block;
+    margin-bottom: $medium-space;
+  }
   
+  &__description{
+    margin-bottom: 3.6rem;
+  }
+
   &__credits{
     width: 100%;
     background-color: var(--color-yllw-02);
     padding: 1rem 0;
+    
     color: var(--color-yllw);
 
-
-    
+    &--link{
+      font-family: 'Inter', Helvetica, sans-serif;
+       font-size: $medium-space;
+       &:link,
+       &:visited{
+       color: inherit;
+     
+    }
+    }
   }
+
+  &__navigation{
+    display: flex;
+    justify-content:space-between;
+    
+    flex-wrap: wrap;
+    font-family: 'Inter', Helvetica, sans-serif;
+    font-weight: 400;
+
+    @include responsive(tablet){
+     
+    }
+   
+  }
+
+  &__nav{
+    
+    flex: 1 1 50%;
+    
+
+    &-title{
+     
+      margin-bottom: $big-space;
+    }
+
+    &-items{
+      margin-bottom: $big-space;
+
+      &>*:not(:last-child){
+        margin-bottom: $small-space;
+      }
+    }
+
+    &-links{
+      display: block;
+      font-size: 1.8rem;
+
+      &:visited,
+      &:link{
+        color:var(--color-yllw-02) ;
+      }
+    }
+  }
+
+
 
   &__flex{
     display: flex;
@@ -133,8 +263,9 @@ FOOTER
 
     div{
       
-      &>*{
-        margin-left:1.6rem ;
+      
+      &>*:not(:first-child){
+        margin-left:$medium-space;
         display: inline-block;
         vertical-align: middle;
       }

@@ -1,0 +1,144 @@
+.rating{
+    display: flex;
+    margin-bottom: 1.4rem;
+
+    &__numbers{
+       margin-right: $medium-space;
+       color: var(--color-neutral-01);
+    }
+
+    &__img{
+        height: 2.6rem;
+        vertical-align: middle;
+    }
+
+    &__light{
+        font-weight: 400;
+        color: var(--color-text);
+    }
+}
+
+.avatar{
+    display: flex;
+   
+
+    &__container{
+       margin-right: -1.95rem;
+       width: 3.6rem;
+       height: 3.6rem;
+       border-radius: 50%;
+       overflow: hidden;
+       border: 2px solid var(--color-neutral-00);
+       position: relative;
+       cursor: pointer;
+       transition: all .2s ease-out;
+    }
+
+    &__container:hover{
+        transform: scale(1.2);
+        z-index: 100;
+    }
+
+
+    &__img{
+
+          
+        &--1{
+         
+          
+            
+        }
+        &--2{
+           
+          
+            
+        }
+        &--3{
+          
+          
+
+        }
+
+        &--4{
+           
+
+        }
+
+        &--5{
+           
+
+        }
+        &--6{
+          
+          
+        }
+
+
+    }
+   
+}
+
+.testimonials{
+    width: 35rem;
+    padding:1rem 4rem;
+    border-radius: .8rem;
+    background: var(--color-neutral-03);
+    position: relative;
+    font-size: 1.4rem;
+    
+   
+    
+    //Position of the boxes
+    /* Easier for me to position it like this, i could've used flex but tried to copy the desing pixels by pixels*/
+
+    &__first{
+      
+        transform: scale(.7) translateX(-7rem);
+    }
+
+    &__second{
+        
+        transform: scale(.7) translateX(7rem);
+     }
+
+    &__name{
+        font-family: "Space Grotesk";
+        font-weight: 700;
+        color: var(--color-neutral-01);
+        margin-bottom: .4rem;
+        margin-left: .5rem;
+    }
+    &__quote{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 1.4rem;
+        quotes: "“" "”" "‘" "’";
+        
+
+        &::before{
+            content: open-quote;
+           
+        }
+        
+        &::after{
+            content:close-quote;
+        }
+
+    }
+
+    &__img{
+        height: 7rem;
+        position: absolute;
+        left: -11%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+    &__stars{
+        
+        img{
+            height: 1rem;
+        }
+    }
+}

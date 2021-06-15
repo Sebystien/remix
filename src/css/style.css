@@ -1,9 +1,10 @@
+@charset "UTF-8";
 /*
 All our variables in here, we will be using the power of css Var to make it easier for us 
 to switch up the theme
 
 */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Source+Sans+Pro:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 :root,
 [data-color="light"] {
   --color-yllw: hsl(48, 93%, 53%);
@@ -11,8 +12,9 @@ to switch up the theme
   --color-bg: hsl(0, 0%, 100%);
   --color-neutral-00: hsl(0, 0%, 100%);
   --color-neutral-01: hsl(0, 0%, 0%);
-  --color-neutral-02: hsl(236, 9%, 29%);
-  --color-neutral-03: hsl(220, 18%, 97%);
+  --color-neutral-02: hsl(235, 9%, 29%);
+  --color-neutral-03: hsl(220, 20%, 97%);
+  --color-neutral-04: hsl(223, 7%, 79%);
   --color-text: hsl(0, 0%, 35%);
   --font-medium: 500;
   --font-bold: 700; }
@@ -124,7 +126,121 @@ h3 {
     color: var(--color-neutral-00);
     font-size: 1.8rem;
     padding: 1.8rem 0;
-    border-radius: .5rem; }
+    border-radius: .5rem;
+    cursor: pointer; }
+  .btn--pricing {
+    width: 100%;
+    padding: 1.8rem 0;
+    color: var(--color-neutral-01);
+    border-radius: .5rem;
+    cursor: pointer; }
+    .btn--pricing:focus {
+      outline: none; }
+
+/*
+   SUBSCRIBE
+  */
+.pricing {
+  padding: 4rem 0 12rem; }
+  .pricing h2, .pricing h3, .pricing li {
+    font-family: "Space Grotesk"; }
+  .pricing h3, .pricing li {
+    text-transform: capitalize; }
+  .pricing__box {
+    padding: 3.6rem;
+    border-radius: .8rem; }
+    .pricing__box:not(:last-child) {
+      margin-bottom: 4rem; }
+    .pricing__box--starter {
+      background: var(--color-neutral-02);
+      color: var(--color-neutral-04); }
+      .pricing__box--starter h3 {
+        color: var(--color-neutral-04); }
+  .pricing__tiers {
+    font-weight: 400;
+    font-size: 1.8rem; }
+  .pricing__price {
+    margin-bottom: 0.8rem; }
+    .pricing__price--price {
+      font-size: 5.6rem;
+      font-weight: 500;
+      font-family: 'Space Grotesk'; }
+    .pricing__price--month {
+      font-size: 1.8rem;
+      font-weight: 400; }
+  .pricing__description {
+    margin-bottom: 2.4rem; }
+  .pricing__list--items {
+    margin-bottom: 1.6rem;
+    font-weight: 400; }
+  .pricing__img {
+    margin-right: 1.6rem;
+    vertical-align: middle; }
+
+.rating {
+  display: flex;
+  margin-bottom: 1.4rem; }
+  .rating__numbers {
+    margin-right: 1.6rem;
+    color: var(--color-neutral-01); }
+  .rating__img {
+    height: 2.6rem;
+    vertical-align: middle; }
+  .rating__light {
+    font-weight: 400;
+    color: var(--color-text); }
+
+.avatar {
+  display: flex; }
+  .avatar__container {
+    margin-right: -1.95rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--color-neutral-00);
+    position: relative;
+    cursor: pointer;
+    transition: all .2s ease-out; }
+  .avatar__container:hover {
+    transform: scale(1.2);
+    z-index: 100; }
+
+.testimonials {
+  width: 35rem;
+  padding: 1rem 4rem;
+  border-radius: .8rem;
+  background: var(--color-neutral-03);
+  position: relative;
+  font-size: 1.4rem;
+  /* Easier for me to position it like this, i could've used flex but tried to copy the desing pixels by pixels*/ }
+  .testimonials__first {
+    transform: scale(0.7) translateX(-7rem); }
+  .testimonials__second {
+    transform: scale(0.7) translateX(7rem); }
+  .testimonials__name {
+    font-family: "Space Grotesk";
+    font-weight: 700;
+    color: var(--color-neutral-01);
+    margin-bottom: .4rem;
+    margin-left: .5rem; }
+  .testimonials__quote {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1.4rem;
+    quotes: "“" "”" "‘" "’"; }
+    .testimonials__quote::before {
+      content: open-quote; }
+    .testimonials__quote::after {
+      content: close-quote; }
+  .testimonials__img {
+    height: 7rem;
+    position: absolute;
+    left: -11%;
+    top: 50%;
+    transform: translateY(-50%); }
+  .testimonials__stars img {
+    height: 1rem; }
 
 .toggle {
   background: lightcoral; }
@@ -190,6 +306,9 @@ main
 ***************************/
 .section {
   /*
+   intro
+  */
+  /*
    TESTIMONIALS
   */
   /*
@@ -209,31 +328,93 @@ main
       display: block; }
       .section__intro-link:link, .section__intro-link:visited {
         color: var(--color-neutral-01); }
+  .section__reviews {
+    margin-bottom: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    font-family: "Source Sans Pro", Helvetica, sans-serif; }
+    @media (min-width: 48rem) {
+      .section__reviews {
+        flex-direction: row-reverse; } }
+  .section__reviews--top {
+    margin-bottom: 3.2rem; }
+  .section__reviews--bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+  .section__reviews-counter {
+    display: flex; }
+  .section__reviews-p {
+    margin-bottom: 1.6rem; }
   .section__subscribe {
     background-color: var(--color-yllw);
     padding-top: 6.4rem; }
-  .section__form > * {
-    display: block;
-    width: 100%; }
-  .section__form :first-child {
-    margin-bottom: 0.8rem; }
+  .section__subscribe--bottom img {
+    transform: translateY(0.9rem); }
+  .section__form {
+    margin-bottom: 3.2rem; }
+    .section__form > * {
+      display: block;
+      width: 100%; }
+    .section__form :first-child {
+      margin-bottom: 0.8rem;
+      color: var(--color-yllw-02);
+      padding: 1.8rem 0 1.8rem 3.6rem;
+      border: none;
+      border-radius: .5rem; }
+    .section__form-field::placeholder {
+      color: var(--color-yllw-02); }
+    .section__form-field:focus {
+      outline: none; }
 
 /**************************
 FOOTER
 ***************************/
 .footer {
+  padding-top: 2rem;
   background-color: var(--color-yllw);
   color: var(--color-yllw-02); }
+  .footer__text {
+    width: 95%; }
+  .footer__logo {
+    display: block;
+    margin-bottom: 1.6rem; }
+  .footer__description {
+    margin-bottom: 3.6rem; }
   .footer__credits {
     width: 100%;
     background-color: var(--color-yllw-02);
     padding: 1rem 0;
     color: var(--color-yllw); }
+    .footer__credits--link {
+      font-family: 'Inter', Helvetica, sans-serif;
+      font-size: 1.6rem; }
+      .footer__credits--link:link, .footer__credits--link:visited {
+        color: inherit; }
+  .footer__navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: 'Inter', Helvetica, sans-serif;
+    font-weight: 400; }
+  .footer__nav {
+    flex: 1 1 50%; }
+    .footer__nav-title {
+      margin-bottom: 2.4rem; }
+    .footer__nav-items {
+      margin-bottom: 2.4rem; }
+      .footer__nav-items > *:not(:last-child) {
+        margin-bottom: 0.8rem; }
+    .footer__nav-links {
+      display: block;
+      font-size: 1.8rem; }
+      .footer__nav-links:visited, .footer__nav-links:link {
+        color: var(--color-yllw-02); }
   .footer__flex {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    .footer__flex div > * {
+    .footer__flex div > *:not(:first-child) {
       margin-left: 1.6rem;
       display: inline-block;
       vertical-align: middle; }
@@ -306,17 +487,18 @@ FOOTER
   .nav__navigation {
     display: flex;
     flex: 1;
-    display: none; }
+    overflow-x: hidden; }
     @media (max-width: 1200px) {
       .nav__navigation {
         flex-direction: column;
         align-items: center;
         position: absolute;
         top: 6rem;
-        right: -100%;
+        right: 0;
         width: 0;
-        background: dodgerblue;
-        z-index: 20; } }
+        background-color: var(--color-neutral-00);
+        z-index: 20;
+        transition: all .3s; } }
   .nav__navigation li {
     margin-left: 2.4rem; }
     @media (max-width: 1200px) {
