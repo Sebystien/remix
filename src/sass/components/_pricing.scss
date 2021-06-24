@@ -23,7 +23,8 @@
     &__box{
         padding: 3.6rem;
         border-radius: .8rem;
-
+        //background: red;
+        width: 40rem;
 
         &:not(:last-child){
             margin-bottom: 4rem;
@@ -63,6 +64,7 @@
 
    &__description{
        margin-bottom: $big-space;
+       
    }
 
    &__list{
@@ -77,10 +79,84 @@
        margin-right: $medium-space;
        vertical-align: middle;
    }
-
-
-
-
-
-
 }
+
+
+.flex-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @include responsive(tablet){
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include responsive(desktop){
+        justify-content: space-between;
+        &>*:not(:last-child){
+           
+                margin-right: 7.6rem;
+            
+           
+        }
+    }
+    
+    .pricing__box{
+    
+      @include responsive(tablet){
+        margin: 0;
+        flex: 1 0 50%;
+        
+
+        &--basic{
+            order: 1;
+            margin-bottom: 4rem;
+            max-width: 40rem;
+          }
+          &--pro{
+            order: 2;
+            margin-bottom: 4rem;
+            max-width: 40rem;
+          }
+          &--starter{
+            order: 3;
+        }
+  
+     }
+
+     @include responsive(desktop){
+       
+      
+       
+       max-width: 40rem;
+       margin: 0;
+       
+       &--basic{
+        order: 1;
+        
+      }
+      &--pro{
+        order: 3;
+        
+      }
+      &--starter{
+        order: 2;
+    }
+     }
+    }
+    
+  }
+
+  /*
+   &--basic{
+          order: 1;
+          
+        }
+        &--pro{
+          order: 2;
+          
+        }
+        &--starter{
+          order: 3;
+      }*/

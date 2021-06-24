@@ -202,7 +202,7 @@
           </p>
           <div class="section__box">
            <form action="#" class="section__form">
-            <input type="email" class="section__form-field" name="subscribe" required placeholder="johndoe@email.com">
+            <input type="email" class="section__form-field" name="subscribe" required placeholder="Enter email address">
             <button type="submit" class="btn--submit">Send me the Guide</button>
            </form>
           </div>
@@ -217,11 +217,11 @@
 
        <!--Pricing-->
        <section class="section__pricing pricing">
-         <div class="row">
+         <div class="row flex-wrap">
 
            <!--Table-->
 
-           <div class="pricing__box">
+           <div class="pricing__box pricing__box--basic">
              <h3 class="pricing__tiers title--h3">basic</h3>
              <h2 class="pricing__price">
               <span class="pricing__price--price">$39</span>
@@ -257,7 +257,7 @@
 
              <!--Table-->
 
-           <div class="pricing__box">
+           <div class="pricing__box pricing__box--pro">
             <h3 class="pricing__tiers title--h3">Pro</h3>
             <h2 class="pricing__price">
               <span class="pricing__price--price">$129</span>
@@ -287,7 +287,8 @@
     ############# Footer    
     -->
     <footer class="footer">
-      <div class="footer__description row">
+     <div class="row footer--flex">
+      <div class="footer__description">
         <img src="./Assets/Footer-logo.svg" alt="Remix" class="footer__logo">
         <p class="footer__text">
           Remix is a Figma and Sketch plugin that was made with Developers in mind. 
@@ -295,11 +296,11 @@
           copy CSS code in one click, and export your assets effortlessly.
        
         </p>
-        </div>
+      </div>
 
    
      
-    <div class="footer__navigation row">
+   <div class="footer__navigation">
     <!--Nav-->
     <div class="footer__nav">
       <h3 class="footer__nav-title h3--nav-title">Supported</h3>
@@ -334,8 +335,11 @@
       </ul>
     </div>
 
-    </div>
+      </div>
 
+    </div>
+    
+    </footer>
     <div class="footer__credits">
       <div class="row footer__flex">
         <p class="footer__paragraph p--footer">
@@ -349,7 +353,6 @@
         </div>
       </div>
     </div>
-    </footer>
 <!--Sign up
     <svg class="figma">
       <use

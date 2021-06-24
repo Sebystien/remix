@@ -86,19 +86,27 @@
     position: relative;
     font-size: 1.4rem;
     
+    
    
     
     //Position of the boxes
     /* Easier for me to position it like this, i could've used flex but tried to copy the desing pixels by pixels*/
 
     &__first{
-      
-        transform: scale(.7) translateX(-7rem);
+        transform: scale(.7) translateX(-5rem);
+        @include responsive(phone){
+            transform: scale(1) translateX(7rem);
+           }
     }
 
     &__second{
         
         transform: scale(.7) translateX(7rem);
+
+        @include responsive(phone){
+            transform: scale(1) translateX(17rem);
+            margin-top: 4rem;
+           }
      }
 
     &__name{
@@ -107,6 +115,12 @@
         color: var(--color-neutral-01);
         margin-bottom: .4rem;
         margin-left: .5rem;
+
+        @include responsive(tablet){
+            margin-left: 1.6rem;
+           }
+
+        
     }
     &__quote{
         width: 90%;

@@ -67,8 +67,26 @@ main
   &__intro{
     margin-bottom: 8rem;
 
+
+
+    @include responsive(desktop){
+      display: flex;
+      align-items: center;
+    }
+    
+    .title--h2{
+     @include responsive(desktop){
+       width: 70%;
+     }
+    }
+
+
     &-paragraph{
       margin-bottom: $big-space;
+
+      @include responsive(desktop){
+        width: 57%;
+      }
     }
     &-link{
       text-decoration: solid;
@@ -83,6 +101,15 @@ main
         
       }
     }
+
+    &--bottom{
+      width: 51.4rem;
+      background: chartreuse;
+    }
+
+    
+
+
   }
 
   /*
@@ -94,10 +121,10 @@ main
     display: flex;
     flex-direction: column;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
-
     @include responsive(tablet){
-      flex-direction: row-reverse;
-    }
+      margin-bottom: 7.6rem;
+     }
+    
   }
 
   &__reviews--top{
@@ -108,8 +135,7 @@ main
   &__reviews--bottom{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    
+
   }
 
   &__reviews-counter{
@@ -119,6 +145,8 @@ main
 
   &__reviews-p{
     margin-bottom: $medium-space;
+
+    
   }
 
 
@@ -129,6 +157,8 @@ main
   &__subscribe{
     background-color: var(--color-yllw);
     padding-top: 6.4rem ;
+
+    
   }
 
   &__subscribe--bottom{
@@ -142,6 +172,10 @@ main
     &>*{
       display: block;
       width: 100%;
+
+      @include responsive(tablet){
+        display: inline-block;
+       }
     }
     & :first-child{
       margin-bottom: $small-space;
@@ -149,16 +183,37 @@ main
       padding: 1.8rem 0 1.8rem 3.6rem;
       border: none;
       border-radius: .5rem;
+      
+      @include responsive(tablet){
+        margin: 0;
+        width: 24.9rem;
+        height: 5.9rem;
+       }
      
+    }
+
+    & :nth-child(2){
+     
+
+      @include responsive(tablet){
+        margin-left:$medium-space ;
+        width: 22rem;
+        padding: 1.9rem 2.4rem;
+       }
     }
 
     &-field::placeholder{
       color: var(--color-yllw-02);
-      
+      opacity: .7;
+      font-size: $medium-space;
+     
     }
      
     &-field:focus{
       outline: none;
+    }
+    &-field:focus:invalid{
+      border: 1px solid orangered;
     }
 
 
@@ -177,6 +232,10 @@ FOOTER
   padding-top: 2rem;
   background-color: var(--color-yllw);
   color: var(--color-yllw-02);
+
+  @include responsive(tab-land){
+    display: flex;
+  }
  
 
   &__text{
@@ -191,6 +250,8 @@ FOOTER
   
   &__description{
     margin-bottom: 3.6rem;
+
+    
   }
 
   &__credits{
@@ -212,22 +273,16 @@ FOOTER
   }
 
   &__navigation{
-    display: flex;
-    justify-content:space-between;
     
-    flex-wrap: wrap;
     font-family: 'Inter', Helvetica, sans-serif;
     font-weight: 400;
 
-    @include responsive(tablet){
-     
-    }
    
   }
 
   &__nav{
     
-    flex: 1 1 50%;
+    
     
 
     &-title{
@@ -271,4 +326,38 @@ FOOTER
       }
     }
   }
+}
+
+
+/***
+
+footer flex
+
+***/
+
+.footer--flex{
+  @include responsive(desktop){
+    padding-top:4.8rem;
+  display: flex;
+
+  &>*{
+    flex: 1;
+  }
+}
+.footer__navigation{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  & > *{
+    flex: 1 0 50%;
+  }
+ 
+  @include responsive(tablet){
+    & > *{
+      flex: 1 0;
+    }
+    justify-content: space-between;
+  }
+
+}
 }
