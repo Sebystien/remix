@@ -15,7 +15,7 @@
 #### BURGER
 ************/
   &__burger {
-    background: hsl(235, 9%, 95%);
+    //background: hsl(235, 9%, 95%);
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -32,9 +32,6 @@
     @include responsive(tab-land){
       display: none;
     }
-    
-
-    
   }
 
   /*
@@ -106,9 +103,11 @@
       top: 6rem;
       right: 0;
       width: 0;
+      
       background-color: var(--color-neutral-00);
       z-index: 20;
       transition: all .3s;
+      
     }
   }
 
@@ -170,6 +169,7 @@
     
     right: 0;
     width: 100%;
+    
   }
 
   

@@ -84,7 +84,10 @@ h3 {
   font-weight: 700; }
 
 .title--h1 {
-  font-size: 5.6rem; }
+  font-size: 4.6rem; }
+  @media (min-width: 75rem) {
+    .title--h1 {
+      font-size: 5.6rem; } }
 
 .title--h2 {
   color: var(--color-neutral-01);
@@ -257,6 +260,20 @@ h3 {
   .avatar__container:hover {
     transform: scale(1.2);
     z-index: 100; }
+  .avatar__container:first-child:hover {
+    background: rgba(0, 181, 73, 0.7); }
+  .avatar__container:nth-child(2) {
+    background: rgba(241, 122, 24, 0.884); }
+  .avatar__container:nth-child(3) {
+    background: rgba(70, 53, 219, 0.7); }
+  .avatar__container:nth-child(4) {
+    background: rgba(24, 137, 230, 0.74); }
+  .avatar__container:nth-child(5) {
+    background: rgba(247, 30, 192, 0.7); }
+  .avatar__container:nth-child(6) {
+    background: var(--color-yllw); }
+  .avatar__img:hover {
+    mix-blend-mode: overlay; }
 
 .testimonials {
   width: 35rem;
@@ -350,7 +367,7 @@ h3 {
       display: inline-block; }
   .header__paragraph {
     margin-bottom: 2.4rem; }
-  @media (min-width: 48rem) {
+  @media (min-width: 75rem) {
     .header {
       display: flex; }
       .header__hero {
@@ -380,15 +397,18 @@ main
     width: 100%; }
   .section__intro {
     margin-bottom: 8rem; }
-    @media (min-width: 90rem) {
+    @media (min-width: 75rem) {
       .section__intro {
         display: flex;
         align-items: center; } }
     @media (min-width: 90rem) {
       .section__intro .title--h2 {
-        width: 70%; } }
+        width: 55%; } }
     .section__intro-paragraph {
       margin-bottom: 2.4rem; }
+      @media (min-width: 75rem) {
+        .section__intro-paragraph {
+          width: 80%; } }
       @media (min-width: 90rem) {
         .section__intro-paragraph {
           width: 57%; } }
@@ -400,9 +420,9 @@ main
       display: block; }
       .section__intro-link:link, .section__intro-link:visited {
         color: var(--color-neutral-01); }
-    .section__intro--bottom {
-      width: 51.4rem;
-      background: chartreuse; }
+    @media (min-width: 75rem) {
+      .section__intro--bottom {
+        max-width: 51.4rem; } }
   .section__reviews {
     margin-bottom: 3.2rem;
     display: flex;
@@ -411,11 +431,17 @@ main
     @media (min-width: 48rem) {
       .section__reviews {
         margin-bottom: 7.6rem; } }
+    @media (min-width: 75rem) {
+      .section__reviews {
+        flex-direction: row-reverse; } }
   .section__reviews--top {
-    margin-bottom: 3.2rem; }
+    margin-bottom: 3.2rem;
+    flex: 1;
+    align-self: center; }
   .section__reviews--bottom {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    flex: 1; }
   .section__reviews-counter {
     display: flex; }
   .section__reviews-p {
@@ -423,6 +449,9 @@ main
   .section__subscribe {
     background-color: var(--color-yllw);
     padding-top: 6.4rem; }
+    @media (min-width: 48rem) {
+      .section__subscribe {
+        padding: 0; } }
   .section__subscribe--bottom img {
     transform: translateY(0.9rem); }
   .section__form {
@@ -532,6 +561,31 @@ footer flex
       .footer--flex .footer__navigation > * {
         flex: 1 0; } }
 
+/*
+That's for the sign up form
+*/
+@media (min-width: 75rem) {
+  .flex--form {
+    display: flex; } }
+
+@media (min-width: 48rem) {
+  .flex--form .p--section,
+  .flex--form .title--h2 {
+    width: 90%; } }
+
+@media (min-width: 90rem) {
+  .flex--form .p--section,
+  .flex--form .title--h2 {
+    width: 47%; } }
+
+.flex--form .section__subscribe--top {
+  margin: 0;
+  align-self: center; }
+
+.flex--form .section__subscribe--bottom {
+  max-width: 48.1rem;
+  margin: 0 auto; }
+
 .nav {
   padding: 2rem 0;
   justify-content: space-between;
@@ -558,7 +612,6 @@ footer flex
     .nav {
       position: relative; } }
   .nav__burger {
-    background: #f1f1f3;
     cursor: pointer;
     align-items: center;
     justify-content: center;
