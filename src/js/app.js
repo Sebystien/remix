@@ -34,8 +34,8 @@ Toggle for theme switcher
 */
 
 const adjustElement = (colorChecker)=>{
-  document.querySelector('.logo').src= `../Assets/logo-${colorChecker}.svg`;
-  document.querySelector('.hero').src= `../Assets/hero-${colorChecker}.svg`;
+  document.querySelector('.logo').src= `./src/assets/logo-${colorChecker}.svg`;
+  document.querySelector('.hero').src= `./src/assets/hero-${colorChecker}.svg`;
 }
 
 
@@ -82,4 +82,20 @@ ul.addEventListener('click', function(e){
   };
   
   
+});
+
+
+
+/*********************
+ * 
+ * MODAL INTERACTION
+ * 
+ *********************/
+
+const modal=document.querySelector('.modal');
+
+
+modal.addEventListener('click', function(e){
+  e.preventDefault();
+  console.log('hey')
 });

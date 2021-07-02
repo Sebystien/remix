@@ -20,7 +20,8 @@ to switch up the theme
   --font-bold: 700; }
 
 [data-color="dark"] {
-  --color-bg: hsl(223, 10%, 13%); }
+  --color-bg: hsl(223, 10%, 13%);
+  --color-neutral-01: hsl(0, 0%, 100%); }
 
 /*Breakpoint
 $breakpoint: (
@@ -77,11 +78,13 @@ button {
   font-family: "Space Grotesk"; }
 
 h1,
-h1,
+h2,
 h3 {
   line-height: 1.2;
-  color: var(--color-neutral-01);
   font-weight: 700; }
+
+h1 {
+  color: var(--color-neutral-01); }
 
 .title--h1 {
   font-size: 4.6rem; }
@@ -119,7 +122,12 @@ h3 {
   font-size: 1.8rem;
   padding: 1.9rem 2.4rem;
   text-transform: capitalize;
-  cursor: pointer; }
+  cursor: pointer;
+  /**************
+  *
+  ** MODAL BUTTONS
+  *
+  ***************/ }
   .btn img {
     margin-right: 1.6rem;
     vertical-align: middle; }
@@ -139,6 +147,27 @@ h3 {
     cursor: pointer; }
     .btn--pricing:focus {
       outline: none; }
+  .btn--modal-figma, .btn--modal-send {
+    width: 100%; }
+  .btn--modal-figma {
+    margin-top: 2.4rem; }
+  .btn--previous, .btn--next {
+    display: block;
+    width: 100%; }
+  .btn--previous {
+    background: transparent;
+    margin-bottom: 1.6rem; }
+  .btn--next {
+    margin-bottom: 4rem; }
+  .btn--back {
+    background: black;
+    width: 4.2rem;
+    height: 4.2rem;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    display: grid;
+    place-items: center; }
 
 /*
    SUBSCRIBE
@@ -322,32 +351,126 @@ h3 {
     height: 1rem; }
 
 .toggle {
-  background: lightcoral; }
+  margin: 4rem;
+  background: lightcoral;
+  width: 21.2rem;
+  height: 5.9rem;
+  padding: 1rem 0;
+  border-radius: 5px; }
   .toggle__input {
     display: none; }
+  .toggle__switch {
+    width: 100%;
+    height: 100%;
+    background-color: lightgrey;
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
   .toggle__switch span {
     font-family: "Space Grotesk";
-    position: relative;
-    z-index: 1; }
+    background-color: cornflowerblue; }
     .toggle__switch span img {
-      vertical-align: middle; }
-  .toggle__switch {
-    background: var(--color-neutral-03);
-    border-radius: 0.5rem;
-    padding: 1.9rem 2.4rem;
-    position: relative; }
-    .toggle__switch::before {
-      content: "";
-      position: absolute;
-      left: rem;
-      top: 20%;
-      width: 9rem;
-      height: 4rem;
-      box-shadow: 0 2px 0 var(--color-neutral-01);
-      border-radius: 0.5rem;
-      transition: all 0.4s; }
+      vertical-align: middle;
+      margin-right: .8rem; }
   .toggle__input:checked + .toggle__switch::before {
     transform: translateX(10rem); }
+
+.modal {
+  background: #ccc;
+  padding: 3.2rem;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  /*
+    *
+    * INPUT 
+    *
+    */ }
+  .modal__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3.8rem; }
+  .modal__pagination {
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-size: 2rem; }
+  .modal__title {
+    font-family: 'Space Grotesk';
+    font-size: 1.8rem;
+    font-weight: var(--font-bold);
+    width: 70%;
+    margin: auto; }
+  .modal__description {
+    width: 90%;
+    margin: auto;
+    font-weight: 400;
+    font-family: 'Source Sans Pro', Helvetica, sans-serif; }
+  .modal__text {
+    text-align: center; }
+    .modal__text > * {
+      margin-bottom: 1.2rem; }
+  .modal__form {
+    margin-bottom: .8rem; }
+    .modal__form--email {
+      margin-bottom: 3.2rem; }
+  .modal__selection {
+    background: var(--color-neutral-00);
+    padding: 2rem;
+    display: block;
+    border-radius: 5px; }
+  .modal__selection:first-child {
+    margin-bottom: 1.6rem; }
+  .modal__input {
+    margin-top: 2.8rem;
+    width: 100%;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1.6rem;
+    padding: 1.8rem 0 1.8rem 3.6rem;
+    font-size: 1.8rem;
+    border: 1px solid transparent; }
+    .modal__input:placeholder-shown {
+      padding: 1.8rem 0 1.8rem 3.6rem; }
+    .modal__input:focus {
+      outline: none;
+      border: 1px solid #ccc; }
+  .modal__copyright {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center; }
+  .modal__steps {
+    display: none; }
+    .modal__steps--active {
+      display: block; }
+
+.label__title {
+  font-weight: var(--font-bold);
+  font-family: 'Space Grotesk'; }
+
+.label__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .8rem; }
+
+.label__input {
+  display: none; }
+
+.label__custom-input {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 1px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  place-items: center; }
+  .label__custom-input img {
+    width: 100%;
+    transform: scale(0);
+    transition: all .3s ease; }
+
+.label .label__input:checked ~ .label__custom-input img {
+  transform: scale(1); }
 
 .row {
   width: 90%;
@@ -697,3 +820,6 @@ That's for the sign up form
   .nav__active {
     right: 0;
     width: 100%; } }
+
+.top {
+  margin: 4rem 0; }

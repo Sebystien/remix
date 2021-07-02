@@ -1,0 +1,148 @@
+
+.modal{
+    background: #ccc;
+    padding: 3.2rem;
+    font-size: 1.8rem;
+    border-radius: 5px;
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3.8rem;
+    }
+
+    &__pagination{
+        font-family: 'Space Grotesk';
+        font-weight: 400;
+        font-size: 2rem;
+    }
+
+    &__title{
+        
+        font-family: 'Space Grotesk';
+        font-size: 1.8rem;
+        font-weight: var(--font-bold);
+        width: 70%;
+        margin: auto;
+    }
+
+    &__description{
+        width: 90%;
+        margin: auto;
+        font-weight: 400;
+        font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    }
+
+    &__text{
+        text-align: center;
+
+        & > *{
+            margin-bottom: 1.2rem;
+        }
+    }
+    &__form{
+        margin-bottom: .8rem;
+        &--email{
+            margin-bottom: 3.2rem;
+        }
+
+        
+    }
+
+    &__selection{
+        background: var(--color-neutral-00);
+        padding: 2rem;
+        display: block;
+        border-radius: 5px;
+    }
+
+    &__selection:first-child{
+        margin-bottom: 1.6rem;
+    }
+
+    /*
+    *
+    * INPUT 
+    *
+    */
+    &__input{
+        margin-top: 2.8rem;
+        width: 100%;
+        display: block;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 1.6rem;
+        padding: 1.8rem 0 1.8rem 3.6rem;
+        font-size: 1.8rem;
+        border:1px solid transparent;
+
+        &:placeholder-shown{
+            //font-size: 1.8rem;
+            padding: 1.8rem 0 1.8rem 3.6rem;
+           
+        }
+
+        &:focus{
+            outline: none;
+            border:1px solid #ccc;
+        }
+    }
+
+    &__copyright{
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+    }
+
+
+
+    //This is for the tab
+
+    &__steps{
+        display: none;
+
+        &--active{
+            display: block;
+        }
+    }
+}
+
+//Custom label and ipnut
+
+.label{
+    &__title{
+        font-weight: var(--font-bold);
+        font-family: 'Space Grotesk';
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .8rem;
+    }
+    &__input{
+        display: none;
+    }
+    &__custom-input{
+        width: 1.8rem;
+        height: 1.8rem;
+        border: 1px solid black;
+        border-radius: 50%;
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+        
+       
+        img{
+            width: 100%;
+            transform: scale(0);
+            transition: all .3s ease;
+        }
+    }
+
+    & &__input:checked ~ &__custom-input img{
+       transform: scale(1);
+        
+    }
+}
+
+

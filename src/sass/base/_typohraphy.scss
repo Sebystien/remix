@@ -30,12 +30,17 @@ button {
 }
 
 h1,
-h1,
+h2,
 h3 {
   line-height: 1.2;
-  color: var(--color-neutral-01);
+ 
   font-weight: 700;
 }
+
+h1{
+  color: var(--color-neutral-01);
+}
+
 
 .title {
   &--h1 {

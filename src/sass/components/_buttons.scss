@@ -35,4 +35,49 @@
       outline: none;
     }
   }
+
+  /**************
+  *
+  ** MODAL BUTTONS
+  *
+  ***************/
+
+  &--modal{
+    
+    &-figma,
+    &-send{
+      width: 100%;
+    }
+
+    &-figma{
+      margin-top: 2.4rem;
+    }
+    
+  }
+  
+  &--previous,
+  &--next{
+    display: block;
+    width: 100%;
+  }
+
+  &--previous{
+    background: transparent;
+    margin-bottom: 1.6rem;
+  }
+
+  &--next{
+    margin-bottom: 4rem;
+  }
+
+  &--back{
+    background: black;
+    width: 4.2rem;
+    height: 4.2rem;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    display: grid;
+    place-items: center;
+  }
 }

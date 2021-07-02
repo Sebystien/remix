@@ -13,11 +13,26 @@
     <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
   </head>
   <body data-color="light">
+
+    <div class="nav__toggle toggle">
+      <input type="checkbox" id="toggle" class="toggle__input" />
+      <label for="toggle" class="toggle__switch">
+        
+        <span> <img src="./src/assets/Light.svg" alt="Light" /> Light </span>
+        <span>
+          <img src=".src/assets/moon.svg" alt="" />
+          Dark
+        </span>
+      </label>
+    </div>
+
+
+
     <nav class="nav row flex">
       <!--Nav logo-->
       <div class="nav__logo">
         <a href="/"
-          ><img src="./Assets/logo-white.svg" alt="Remix homepage" class="logo"
+          ><img src="./src/assets/logo-white.svg" alt="Remix homepage" class="logo"
         /></a>
       </div>
 
@@ -27,7 +42,7 @@
       </div>
 
       <!--Background-->
-      <div class="nav__bg"></div>
+      
 
       <!--Nav links-->
       <ul class="nav__navigation">
@@ -39,22 +54,11 @@
       <div class="nav__actions">
         <!--Nav switch-->
 
-        <div class="nav__toggle toggle">
-          <input type="checkbox" id="toggle" class="toggle__input" />
-          <label for="toggle" class="toggle__switch">
-            <span class="toggle__select"></span>
-            <span> <img src="./Assets/Light.svg" alt="Light" /> Light </span>
-            <span>
-              <img src="./Assets/moon.svg" alt="" />
-              Dark
-            </span>
-          </label>
-        </div>
-
+     
         <!--Nav CTAS-->
         <a href="#" class="nav__login nav__links">Sign in</a>
         <button type="button" class="btn btn--yellow">
-          <img src="./Assets/figma-logo.svg" alt="Get the plugin" /> Get figma
+          <img src="./src/assets/figma-logo.svg" alt="Get the plugin" /> Get figma
           plugin
         </button>
       </div>
@@ -62,7 +66,7 @@
 
     <header class="header row">
       <div class="header__img">
-        <img src="./Assets/hero-white.svg" alt="porfolio" class="hero"/>
+        <img src="./src/assets/hero-white.svg" alt="porfolio" class="hero"/>
       </div>
 
       <!--
@@ -78,8 +82,8 @@
           click, and export your assets effortlessly.
         </p>
 
-        <button type="button" class="btn btn--yellow">
-          <img src="./Assets/figma-logo.svg" alt="Get the plugin" /> Get figma
+        <button href="./src/html/signup.html" class="btn btn--yellow">
+          <img src="./src/assets/figma-logo.svg" alt="Get the plugin" /> Get figma
           plugin
         </button>
       </div>
@@ -104,7 +108,7 @@
        </div>
 
        <div class="section__intro--bottom">
-         <img src="./Assets/Collaboration.png" alt="Collab" class="section--img">
+         <img src="./src/assets/Collaboration.png" alt="Collab" class="section--img">
        </div>
 
       </section>
@@ -120,7 +124,7 @@
 
           <div class="rating">
             <h4 class="rating__numbers">5.0 <span class="rating__light">Rating</span> </h2>
-            <img src="./Assets/Star.png" alt="Reviews" class="rating__img">
+            <img src="./src/assets/Star.png" alt="Reviews" class="rating__img">
            
 
           </div>
@@ -129,12 +133,12 @@
             <h4 class="rating__numbers"> 2400+<span class="rating__light"> Developers</span></h2>
             <div class="avatar">
           
-              <div class="avatar__container"><img src="./Assets/useravatar06.png" alt="User" class="avatar__img avatar__img--6"></div>
-              <div class="avatar__container"> <img src="./Assets/useravatar05.png" alt="User" class="avatar__img avatar__img--5"></div>
-              <div class="avatar__container"> <img src="./Assets/useravatar04.png" alt="User" class="avatar__img avatar__img--4"></div>
-              <div class="avatar__container"> <img src="./Assets/useravatar03.png" alt="User" class="avatar__img avatar__img--3"></div>
-              <div class="avatar__container"> <img src="./Assets/useravatar02.png" alt="User" class="avatar__img avatar__img--2"></div>
-              <div class="avatar__container"><img src="./Assets/useravatar01.png" alt="User" class="avatar__img avatar__img--1"></div>
+              <div class="avatar__container"><img src="./src/assets/useravatar06.png" alt="User" class="avatar__img avatar__img--6"></div>
+              <div class="avatar__container"> <img src="./src/assets/useravatar05.png" alt="User" class="avatar__img avatar__img--5"></div>
+              <div class="avatar__container"> <img src="./src/assets/useravatar04.png" alt="User" class="avatar__img avatar__img--4"></div>
+              <div class="avatar__container"> <img src="./src/assets/useravatar03.png" alt="User" class="avatar__img avatar__img--3"></div>
+              <div class="avatar__container"> <img src="./src/assets/useravatar02.png" alt="User" class="avatar__img avatar__img--2"></div>
+              <div class="avatar__container"><img src="./src/assets/useravatar01.png" alt="User" class="avatar__img avatar__img--1"></div>
            
             </div>
   
@@ -149,7 +153,7 @@
 
 
          <figure class="testimonials testimonials__first">
-          <img src="./Assets/testimonials1.png" alt="" class="testimonials__img">
+          <img src="./src/assets/testimonials1.png" alt="" class="testimonials__img">
           <blockquote class="testimonials__quote">
           
             Developers, you no longer need to spend hours translating designs.
@@ -157,11 +161,11 @@
           <figcaption class="testimonials__name">
             Jesse Handricks
             <div class="testimonials__stars">
-              <img src="./Assets/Star.png" alt="Stars">
-              <img src="./Assets/Star.png" alt="Stars">
-              <img src="./Assets/Star.png" alt="Stars">
-              <img src="./Assets/Star.png" alt="Stars">
-              <img src="./Assets/Star.png" alt="Stars">
+              <img src="./src/assets/Star.png" alt="Stars">
+              <img src="./src/assets/Star.png" alt="Stars">
+              <img src="./src/assets/Star.png" alt="Stars">
+              <img src="./src/assets/Star.png" alt="Stars">
+              <img src="./src/assets/Star.png" alt="Stars">
             </div>
           </figcaption>
          </figure>
@@ -169,7 +173,7 @@
 
          <!--Second Comment-->
          <figure class="testimonials testimonials__second">
-          <img src="./Assets/testimonial2.png" alt="" class="testimonials__img">
+          <img src="./src/assets/testimonial2.png" alt="" class="testimonials__img">
           <blockquote class="testimonials__quote">
           Remix has been a life saver when it comes to developer hand off.
             
@@ -177,11 +181,11 @@
           <figcaption class="testimonials__name">
             Mia Andrews
             <div class="testimonials__stars">
-              <img src="./Assets/Star.png" alt="Stars">
-              <img src="./Assets/Star.png" alt="Stars">
-              <img src="./Assets/Star.png" alt="Stars">
-              <img src="./Assets/Star.png" alt="Stars">
-              <img src="./Assets/Star.png" alt="Stars">
+              <img src="./src/assets/Star.png" alt="Stars">
+              <img src="./src/assets/Star.png" alt="Stars">
+              <img src="./src/assets/Star.png" alt="Stars">
+              <img src="./src/assets/Star.png" alt="Stars">
+              <img src="./src/assets/Star.png" alt="Stars">
             </div>
           </figcaption>
          </figure>
@@ -209,7 +213,7 @@
       
         </div>
         <div class="section__subscribe--bottom">
-         <img src="./Assets/Illustrations.png" alt="" class="section--img">
+         <img src="./src/assets/" alt="" class="section--img">
 
         </div>
        </div>
@@ -229,10 +233,10 @@
             </h2>
              <p class="pricing__description p--section">Suited for small teams with minimal developer handoffs</p>
              <ul class="pricing_list">
-               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark" >Web access only.</li>
-               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">20 handoffs per month.</li>
-               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">2 members.</li>
-               <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Offline editing only.</li>
+               <li class="pricing__list--items"><img src="./src/assets/Checkmark.svg" class="pricing__img" alt="Checkmark" >Web access only.</li>
+               <li class="pricing__list--items"><img src="./src/assets/Checkmark.svg" class="pricing__img" alt="Checkmark">20 handoffs per month.</li>
+               <li class="pricing__list--items"><img src="./src/assets/Checkmark.svg" class="pricing__img" alt="Checkmark">2 members.</li>
+               <li class="pricing__list--items"><img src="./src/assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Offline editing only.</li>
              </ul>
              <button class="btn--pricing btn ">Subscribe</button>
            </div>
@@ -247,10 +251,10 @@
               </h2>
               <p class="pricing__description p--section">Suited for medium businesses with a lof of handoffs</p>
               <ul class="pricing_list">
-                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Web & Figma Plugin</li>
-                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">60 handoffs per month.</li>
-                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">4 members.</li>
-                <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Live editing.</li>
+                <li class="pricing__list--items"><img src="./src/assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Web & Figma Plugin</li>
+                <li class="pricing__list--items"><img src="./src/assets/Checkmark.svg" class="pricing__img" alt="Checkmark">60 handoffs per month.</li>
+                <li class="pricing__list--items"><img src="./src/assets/Checkmark.svg" class="pricing__img" alt="Checkmark">4 members.</li>
+                <li class="pricing__list--items"><img src="./src/assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Live editing.</li>
               </ul>
               <button class="btn--pricing btn">Subscribe</button>
             </div>
@@ -265,10 +269,10 @@
             </h2>
             <p class="pricing__description p--section">Suited for small teams with minimal developer handoffs</p>
             <ul class="pricing_list">
-              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">500+ Handoffs per month.</li>
-              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Unlimited members.</li>
-              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Live editing.</li>
-              <li class="pricing__list--items"><img src="./Assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Web and Figma Plugin</li>
+              <li class="pricing__list--items"><img src="./src/assets/Checkmark.svg" class="pricing__img" alt="Checkmark">500+ Handoffs per month.</li>
+              <li class="pricing__list--items"><img src="./src/assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Unlimited members.</li>
+              <li class="pricing__list--items"><img src="./src/assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Live editing.</li>
+              <li class="pricing__list--items"><img src="./src/assets/Checkmark.svg" class="pricing__img" alt="Checkmark">Web and Figma Plugin</li>
             </ul>
             <button class="btn--pricing btn ">Subscribe</button>
           </div>
@@ -289,7 +293,7 @@
     <footer class="footer">
      <div class="row footer--flex">
       <div class="footer__description">
-        <img src="./Assets/Footer-logo.svg" alt="Remix" class="footer__logo">
+        <img src="./src/assets/Footer-logo.svg" alt="Remix" class="footer__logo">
         <p class="footer__text">
           Remix is a Figma and Sketch plugin that was made with Developers in mind. 
           Create custom React components in seconds, 
@@ -347,12 +351,14 @@
         </p>
         <div>
           <a href="/" class="footer__credits--link">support@remix.com</a>
-          <img src="/Assets/Twitter.svg" alt="Check us out">
-          <img src="/Assets/Facebook.svg" alt="Check us out">
+          <img src="./src/assets/Twitter.svg" alt="Check us out">
+          <img src="./src/assets/Facebook.svg" alt="Check us out">
           
         </div>
       </div>
     </div>
+
+    <a href="./src/html/signup.html">This is the page</a>
 <!--Sign up
     <svg class="figma">
       <use
