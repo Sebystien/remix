@@ -176,7 +176,7 @@
 
   .article {
     border-radius: 0.8rem;
-    background: #f6f6f6;
+    background: var(--color-boxes);
 
     font-size: 1.8rem;
     &__img {

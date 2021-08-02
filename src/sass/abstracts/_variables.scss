@@ -23,7 +23,14 @@ $bigger-space: 3.2rem;
   --color-neutral-03: hsl(220, 20%, 97%);
   --color-neutral-04: hsl(223, 7%, 79%);
 
-  --color-text: hsl(0, 0%, 35%); 
+  --color-text: hsl(0, 0%, 35%);
+
+  /*
+  * COLOR ELEMENT
+  */
+  --color-btn: hsl(0, 0%, 0%);
+  --color-switch-bg: hsl(220, 18%, 97%);
+  --color-boxes: hsl(220, 18%, 97%);
 
   --font-medium: 500;
   --font-bold: 700;
@@ -31,5 +38,17 @@ $bigger-space: 3.2rem;
 
 [data-color="dark"] {
   --color-bg: hsl(223, 10%, 13%);
+
+  /*
+  * COLOR TEXT 
+  */
+  --color-text: hsl(0, 0%, 64%);
+
+  /*
+  * COLOR ELEMENT  
+  */
+
+  --color-switch-bg: hsl(0, 0%, 0%);
+  --color-boxes: var(--color-neutral-02);
   --color-neutral-01: hsl(0, 0%, 100%);
 }

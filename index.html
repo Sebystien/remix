@@ -38,13 +38,15 @@
       </ul>
 
       <div class="nav__actions">
+
+        
         <!--Nav switch-->
        <div class="nav__toggle toggle">
       <input type="checkbox" id="toggle" class="toggle__input" />
       <label for="toggle" class="toggle__switch">
         
-        <span> <img src="./src/assets/sun.svg" alt="Light" /> Light </span>
-        <span> <img src="./src/assets/moonlight.svg" alt="Moon" /> Dark</span>
+        <span> <img src="./src/assets/sun-white.svg" alt="Light" class="sun"/> Light </span>
+        <span> <img src="./src/assets/moon-white.svg" alt="Moon" class="moon" /> Dark</span>
       </label>
     </div>
      
@@ -96,7 +98,7 @@
         <p class="section__intro-paragraph p--section">
           With Remix, you will be able to actively collaborate with developers in real-time. No more back-and-forth emails and Slack messages to get that design perfect.
         </p>
-        <a href="#" class="section__intro-link link">learn more &#8594;</a>
+        <a href="#" class="section__intro-link link">learn more <span>&#8594;</span></a>
 
        </div>
 
@@ -145,9 +147,9 @@
         <div class="section__reviews--bottom">
 
 
-         <figure class="testimonials testimonials__first">
+         <figure class="testimonials testimonials__first white">
           <img src="./src/assets/testimonials1.png" alt="" class="testimonials__img">
-          <blockquote class="testimonials__quote">
+          <blockquote class="testimonials__quote ">
           
             Developers, you no longer need to spend hours translating designs.
           </blockquote>
@@ -165,9 +167,9 @@
 
 
          <!--Second Comment-->
-         <figure class="testimonials testimonials__second">
+         <figure class="testimonials testimonials__second white">
           <img src="./src/assets/testimonial2.png" alt="" class="testimonials__img">
-          <blockquote class="testimonials__quote">
+          <blockquote class="testimonials__quote white">
           Remix has been a life saver when it comes to developer hand off.
             
           </blockquote>
@@ -353,5 +355,6 @@
 
     
     <script src="./src/js/app.js"></script>
+     <script src="./src/js/switch.js"></script>
   </body>
 </html>

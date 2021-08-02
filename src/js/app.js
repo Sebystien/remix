@@ -28,30 +28,6 @@ window.addEventListener("resize", (e) => {
   console.log("it works");
 });
 
-/* 
-Toggle for theme switcher
-*/
-
-const adjustElement = (colorChecker) => {
-  document.querySelector(".logo").src = `./src/assets/logo-${colorChecker}.svg`;
-  document.querySelector(".hero").src = `./src/assets/hero-${colorChecker}.svg`;
-};
-
-const toggle = document.querySelector(".toggle__input");
-
-toggle.addEventListener("change", (e) => {
-  e.preventDefault();
-  if (e.target.checked) {
-    document.body.setAttribute("data-color", "dark");
-    if (document.body.getAttribute("data-color") === "dark") {
-      adjustElement("black");
-    }
-  } else {
-    document.body.removeAttribute("data-color");
-    adjustElement("white");
-  }
-});
-
 //Create a function that checks wether the attribute data ius dark, and uodate the value
 /*
 1- check if the datatheme is a certain color and update it 

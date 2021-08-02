@@ -4,21 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="./src/css/style.css" type="text/css" />
     <title>Remix | Blog</title>
   </head>
   <body data-color="light">
     <header class="row header-blog">
       <div class="header-blog__top">
         <a href="blog.html" class="header-blog__logo">
-          <img src="../assets/logo-white.svg" alt="" /> <span>Blog</span>
+          <img src="./src/assets/logo-white.svg" class="logo" alt="Remix" />
+          <span>Blog</span>
         </a>
 
         <div class="nav__toggle toggle">
           <input type="checkbox" id="toggle" class="toggle__input" />
           <label for="toggle" class="toggle__switch">
-            <span> <img src="../assets/sun.svg" alt="Light" /> Light </span>
-            <span> <img src="../assets/moonlight.svg" alt="Moon" /> Dark</span>
+            <span>
+              <img src="./src/assets/sun-white.svg" alt="Light" class="sun" />
+              Light
+            </span>
+            <span>
+              <img src="./src/assets/moon-white.svg" alt="Moon" class="moon" />
+              Dark</span
+            >
           </label>
         </div>
       </div>
@@ -41,7 +48,7 @@
 
         <form class="header-blog__search">
           <button class="header-blog__btn" type="submit">
-            <img src="../assets/Search.svg" alt="Search" />
+            <img src="./src/assets/Search.svg" alt="Search" />
           </button>
           <input
             type="text"
@@ -56,7 +63,7 @@
     <main class="main-blog row">
       <article class="article">
         <div class="article__img">
-          <img src="../assets/blog1.png" alt="Sunset" />
+          <img src="./src/assets/blog1.png" alt="Sunset" />
         </div>
         <div class="article__body">
           <h3 class="article__title">Celebrating Earth Day at remix</h3>
@@ -73,7 +80,7 @@
 
       <article class="article">
         <div class="article__img">
-          <img src="../assets/blog2.png" alt="Sunset" />
+          <img src="./src/assets/blog2.png" alt="Sunset" />
         </div>
         <div class="article__body">
           <h3 class="article__title">Productivity</h3>
@@ -87,7 +94,7 @@
       <!--*************************************-->
       <article class="article">
         <div class="article__img">
-          <img src="../assets/blog3.png" alt="Sunset" />
+          <img src="./src/assets/blog3.png" alt="Sunset" />
         </div>
         <div class="article__body">
           <h3 class="article__title">Developer Hand-off Explained</h3>
@@ -102,7 +109,7 @@
 
       <article class="article">
         <div class="article__img">
-          <img src="../assets/blog4.png" alt="Sunset" />
+          <img src="./src/assets/blog4.png" alt="Sunset" />
         </div>
         <div class="article__body">
           <h3 class="article__title">Using Figma Variants</h3>
@@ -120,7 +127,7 @@
       <div class="row footer--flex">
         <div class="footer__description">
           <img
-            src="../assets/Footer-logo.svg"
+            src="./src/assets/Footer-logo.svg"
             alt="Remix"
             class="footer__logo"
           />
@@ -181,8 +188,8 @@
         <p class="footer__paragraph p--footer">&copy; Remix 2021</p>
         <div>
           <a href="/" class="footer__credits--link">support@remix.com</a>
-          <img src="../assets/Twitter.svg" alt="Check us out" />
-          <img src="../assets/Facebook.svg" alt="Check us out" />
+          <img src="./src/assets/Twitter.svg" alt="Check us out" />
+          <img src="./src/assets/Facebook.svg" alt="Check us out" />
         </div>
       </div>
     </div>
@@ -205,5 +212,7 @@
         console.log(clicked);
       });
     </script>
+
+    <script src="./src/js/switch.js"></script>
   </body>
 </html>
