@@ -1,3 +1,3 @@
-import {g} from './modal.js';
+import * as u from './modal.js';
 
-console.log(g(3))
+u.g(3);

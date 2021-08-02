@@ -1,132 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Remix | Sign up</title>
 
-    <link  rel="stylesheet" href="../css/style.css" type="text/css">
-</head>
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+  </head>
 
-<body data-color="light">
+  <body data-color="light">
+    <div class="row">
+      <div class="top">
+        <a href="/index.html" class="btn--back"
+          ><img src="../assets/back-arrow.svg" alt="homepage" />
+        </a>
 
-  <div class="row">
-    <div class="top">
-        
-            <a href="../index.html" class="btn--back"><img src="../assets/back-arrow.svg" alt="homepage" /> </a>
-        
-  </div>
-        
+        <div class="nav__toggle toggle">
+          <input type="checkbox" id="toggle" class="toggle__input" />
+          <label for="toggle" class="toggle__switch">
+            <span> <img src="../assets/Light.svg" alt="Light" /> Light </span>
+            <span>
+              <img src="../assets/moonlight.svg" alt="" />
+              Dark
+            </span>
+          </label>
+        </div>
+      </div>
     </div>
 
     <div class="row flex-modal">
-        <div class="modal">
-            <div class="modal__header">
-                <div class="modal__logo">
-                    <img src="../assets/logo-white.svg" alt="Remix">
-                </div>
-                <h2 class="modal__pagination">
-                   Steps <span class="modal__steps-number"> 1</span>/<span class="modal__page">3</span>
-                </h2>
-            </div>
-           <div class="modal__steps modal__steps--active">
-            <div class="modal__text">
-                <h3 class="modal__title">Set up your Remix Environment</h3>
-                <p class="modal__description">This will take less than a minute, we use this information to customize Remix for you.</p>
-            </div>
-            <form action="#" class="form modal__form">
-                
-                    <label for="select-1" class="label modal__selection">
-                        <span class="label__top">
-                            <span class="label__title">Personal Use</span>
-                           <input type="radio" name="steps" value="personal"  id="select-1" class="label__input">
-                           <span class="label__custom-input">
-                            <img src="../assets/Checkmark-blue.svg" alt="Select">
-                           </span>
-                        </span>
+      <div class="modal">
+        <div class="modal__header">
+          <div class="modal__logo">
+            <img src="../assets/logo-white.svg" alt="Remix" />
+          </div>
+          <h2 class="modal__pagination">
+            Steps <span class="modal__steps-number"> 1</span>/<span
+              class="modal__page"
+              >3</span
+            >
+          </h2>
+        </div>
+        <div
+          class="modal__steps modal__steps--1 modal__steps--active"
+          data-tab="1"
+        >
+          <div class="modal__text">
+            <h3 class="modal__title">Set up your Remix Environment</h3>
+            <p class="modal__description">
+              This will take less than a minute, we use this information to
+              customize Remix for you.
+            </p>
+          </div>
+          <form action="#" class="form modal__form">
+            <label for="select-1" class="label modal__selection">
+              <span class="label__top">
+                <span class="label__title">Personal Use</span>
+                <input
+                  type="radio"
+                  name="steps"
+                  value="personal"
+                  id="select-1"
+                  class="label__input"
+                />
+                <div class="label__border"></div>
+                <span class="label__custom-input">
+                  <img src="../assets/Checkmark-blue.svg" alt="Select" />
+                </span>
+              </span>
 
-                        <p class="form__info">I'm using this for a team of <2.</p>
-                    </label>
+              <p class="form__info">I'm using this for a team of <2.</p>
+            </label>
 
+            <label for="select-2" class="label modal__selection">
+              <span class="label__top">
+                <span class="label__title">Corporate use</span>
+                <input
+                  type="radio"
+                  name="steps"
+                  value="personal"
+                  id="select-2"
+                  class="label__input"
+                />
+                <div class="label__border"></div>
+                <span class="label__custom-input">
+                  <img src="../assets/Checkmark-blue.svg" alt="Select" />
+                </span>
+              </span>
 
+              <p class="form__info">I’m using this for a team of >2.</p>
+            </label>
+          </form>
 
-                         <label for="select-2" class="label modal__selection">
-                        <span class="label__top">
-                            <span class="label__title">Corporate use</span>
-                        <input type="radio" name="steps" value="personal"  id="select-2" class="label__input">
-                           <span class="label__custom-input">
-                              <img src="../assets/Checkmark-blue.svg" alt="Select">
-                           </span>
-                        </span>
-                        
-                        <p class="form__info">I’m using this for a team of >2.</p>
-                    </label>
-
-                
-            </form>
-
+          <div class="btn-group">
             <button class="btn btn--previous" disabled>Previous</button>
-            <button class="btn btn--next">Next</button>
+            <button class="btn btn--next" data-next="2">Next</button>
+          </div>
+        </div>
 
-           </div>
-
-           <!--
+        <!--
                **************************
                /* STEP 2
                **************************
            -->
 
-           <div class="modal__steps ">
-            <div class="modal__text">
-                <h3 class="modal__title">Link your Figma Account</h3>
-                <p class="modal__description">We use your account to display your projects in the plugin’s main dashboard.</p>
-            </div>
-            <button type="button" class="btn btn--modal-figma btn--yellow">
-                <img src="../assets/figma-logo.svg" alt="Link your account" /> Link Figma Account
-              </button>
+        <div class="modal__steps modal__steps--2" data-tab="2">
+          <div class="modal__text">
+            <h3 class="modal__title">Link your Figma Account</h3>
+            <p class="modal__description">
+              We use your account to display your projects in the plugin’s main
+              dashboard.
+            </p>
+          </div>
+          <button type="button" class="btn btn--modal-figma btn--yellow">
+            <img src="../assets/figma-logo.svg" alt="Link your account" /> Link
+            Figma Account
+          </button>
 
-            <button class="btn btn--previous">Previous</button>
-            <button class="btn btn--next">Next</button>
+          <div class="btn-group">
+            <button class="btn btn--previous" data-prev="1">Previous</button>
+            <button class="btn btn--next" data-next="3">Next</button>
+          </div>
+        </div>
 
-           </div>
-
-            <!--
+        <!--
                **************************
                /* STEP 3
                **************************
            -->
-           <div class="modal__steps ">
-            <div class="modal__text">
-                <h3 class="modal__title">Confirm Your Email Address</h3>
-                <p class="modal__description">Enter your email address below, and click on Send Code to verify it.</p>
-            </div>
-           <form action="#" class="form modal__form moda__form--email">
-               <input type="email" class="modal__input" placeholder="Enter email address" required>
-               <button type="submit" class="btn btn--modal-send btn--yellow">
-               <img src="../assets/Send.svg" alt="Link your account" /> Link Figma Account
-            </button>
-           </form>
-
-            <button class="btn btn--previous">Previous</button>
-            <button class="btn btn--next">Next</button>
-
-           </div>
-            <p class="modal__copyright">
-                © 2021 Remix. All Rights Reserved.
+        <div class="modal__steps modal__steps--3" data-tab="3">
+          <div class="modal__text">
+            <h3 class="modal__title">Confirm Your Email Address</h3>
+            <p class="modal__description">
+              Enter your email address below, and click on Send Code to verify
+              it.
             </p>
+          </div>
+          <form action="#" class="form modal__form modal__form--email">
+            <input
+              type="email"
+              class="modal__input"
+              placeholder="Enter email address"
+              required
+            />
+            <button type="submit" class="btn btn--modal-send btn--yellow">
+              <img src="../assets/Send.svg" alt="Send Code" />Send code
+            </button>
+          </form>
 
-
+          <div class="btn-group">
+            <button class="btn btn--previous" data-prev="2">Previous</button>
+            <button class="btn btn--next" data-next="1">Next</button>
+          </div>
         </div>
-
-        
-
+        <p class="modal__copyright">© 2021 Remix. All Rights Reserved.</p>
+      </div>
     </div>
-    <script type="module" src="../js/index.js">
-       
-
-   
-    </script>
-</body>
+    <script src="../js/modal.js"></script>
+  </body>
 </html>

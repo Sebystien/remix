@@ -15,17 +15,17 @@ $breakpoint: (
     }
   }
   @if $size == tablet {
-    @media (min-width: 48rem) {
+    @media (min-width: 43.625rem) {
       @content;
     }
   }
   @if $size == tab-land {
-    @media (min-width: 75rem) {
+    @media (min-width: 64rem) {
       @content;
     }
   }
   @if $size == desktop {
-    @media (min-width: 90rem) {
+    @media (min-width: 71.25rem) {
       @content;
     }
   }

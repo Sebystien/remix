@@ -11,27 +11,25 @@
     vertical-align: middle;
   }
 
-  &--submit{
+  &--submit {
     background: var(--color-yllw-02);
     border: none;
     color: var(--color-neutral-00);
     font-size: 1.8rem;
     padding: 1.8rem 0;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     cursor: pointer;
-
-    
   }
 
-  &--pricing{
+  &--pricing {
     width: 100%;
     padding: 1.8rem 0;
-    
+
     color: var(--color-neutral-01);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     cursor: pointer;
 
-    &:focus{
+    &:focus {
       outline: none;
     }
   }
@@ -42,35 +40,56 @@
   *
   ***************/
 
-  &--modal{
-    
+  &--modal {
     &-figma,
-    &-send{
+    &-send {
       width: 100%;
     }
 
-    &-figma{
-      margin-top: 2.4rem;
+    &-send {
+      @include responsive(tablet) {
+        padding: 0;
+        margin: 0;
+      }
     }
-    
+
+    &-figma {
+      margin-top: 2.4rem;
+
+      @include responsive(tablet) {
+        margin-bottom: 7.6rem;
+      }
+    }
   }
-  
+
   &--previous,
-  &--next{
+  &--next {
     display: block;
     width: 100%;
+
+    @include responsive(tablet) {
+      max-width: 22rem;
+    }
   }
 
-  &--previous{
+  &--previous {
     background: transparent;
     margin-bottom: 1.6rem;
+
+    @include responsive(tablet) {
+      margin-bottom: 0;
+    }
   }
 
-  &--next{
+  &--next {
     margin-bottom: 4rem;
+
+    @include responsive(tablet) {
+      margin: 0;
+    }
   }
 
-  &--back{
+  &--back {
     background: black;
     width: 4.2rem;
     height: 4.2rem;
@@ -80,4 +99,9 @@
     display: grid;
     place-items: center;
   }
+}
+
+.cta:link,
+.cta:visited {
+  color: var(--color-neutral-01);
 }

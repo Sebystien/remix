@@ -1,14 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
     <title>Remix | Blog</title>
-</head>
-<body>
-    This is a blog
+  </head>
+  <body data-color="light">
+    <header class="row header-blog">
+      <div class="header-blog__top">
+        <a href="blog.html" class="header-blog__logo">
+          <img src="../assets/logo-white.svg" alt="" /> <span>Blog</span>
+        </a>
 
-    <img src="../Assets/Facebook.svg" alt="">
-</body>
+        <div class="nav__toggle toggle">
+          <input type="checkbox" id="toggle" class="toggle__input" />
+          <label for="toggle" class="toggle__switch">
+            <span> <img src="../assets/sun.svg" alt="Light" /> Light </span>
+            <span> <img src="../assets/moonlight.svg" alt="Moon" /> Dark</span>
+          </label>
+        </div>
+      </div>
+
+      <!--************ NAV ************-->
+
+      <nav class="header-blog__nav">
+        <ul class="header-blog__nav-items">
+          <li>
+            <a href="#" class="header-blog__link header-blog__link--active"
+              >Recent</a
+            >
+          </li>
+          <li>
+            <a href="#" class="header-blog__link">Ressources</a>
+          </li>
+          <li><a href="#" class="header-blog__link">Figma</a></li>
+          <li><a href="#" class="header-blog__link">Company</a></li>
+        </ul>
+
+        <form class="header-blog__search">
+          <button class="header-blog__btn" type="submit">
+            <img src="../assets/Search.svg" alt="Search" />
+          </button>
+          <input
+            type="text"
+            class="header-blog__input"
+            required
+            placeholder="Search"
+          />
+        </form>
+      </nav>
+    </header>
+
+    <main class="main-blog row">
+      <article class="article">
+        <div class="article__img">
+          <img src="../assets/blog1.png" alt="Sunset" />
+        </div>
+        <div class="article__body">
+          <h3 class="article__title">Celebrating Earth Day at remix</h3>
+          <h3 class="article__time">April 12, 2021</h3>
+
+          <p class="article__paragraph">
+            One thing COVID has shown us is how Earth can still be saved. See
+            how we’re contributing to making Earth a better place at Remix.
+          </p>
+        </div>
+      </article>
+
+      <!--*************************************-->
+
+      <article class="article">
+        <div class="article__img">
+          <img src="../assets/blog2.png" alt="Sunset" />
+        </div>
+        <div class="article__body">
+          <h3 class="article__title">Productivity</h3>
+          <h3 class="article__time">Jan 15, 2021</h3>
+
+          <p class="article__paragraph">
+            Tips on being more productive by Remix.
+          </p>
+        </div>
+      </article>
+      <!--*************************************-->
+      <article class="article">
+        <div class="article__img">
+          <img src="../assets/blog3.png" alt="Sunset" />
+        </div>
+        <div class="article__body">
+          <h3 class="article__title">Developer Hand-off Explained</h3>
+          <h3 class="article__time">May 21, 2021</h3>
+
+          <p class="article__paragraph">
+            Our team goes over what developer hand-off is in complete details.
+          </p>
+        </div>
+      </article>
+      <!--*************************************-->
+
+      <article class="article">
+        <div class="article__img">
+          <img src="../assets/blog4.png" alt="Sunset" />
+        </div>
+        <div class="article__body">
+          <h3 class="article__title">Using Figma Variants</h3>
+          <h3 class="article__time">April 22, 2021</h3>
+
+          <p class="article__paragraph">
+            Learn how to create Figma variants for components to facilitate
+            developer hand offs.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="row footer--flex">
+        <div class="footer__description">
+          <img
+            src="../assets/Footer-logo.svg"
+            alt="Remix"
+            class="footer__logo"
+          />
+          <p class="footer__text">
+            Remix is a Figma and Sketch plugin that was made with Developers in
+            mind. Create custom React components in seconds, copy CSS code in
+            one click, and export your assets effortlessly.
+          </p>
+        </div>
+
+        <div class="footer__navigation">
+          <!--Nav-->
+          <div class="footer__nav">
+            <h3 class="footer__nav-title h3--nav-title">Supported</h3>
+            <ul class="footer__nav-items">
+              <li class="footer__nav-list">
+                <a href="/" class="footer__nav-links">Sketch</a>
+              </li>
+              <li class="footer__nav-list">
+                <a href="/" class="footer__nav-links">Figma</a>
+              </li>
+            </ul>
+          </div>
+
+          <!--Nav-->
+          <div class="footer__nav">
+            <h3 class="footer__nav-title h3--nav-title">Developers</h3>
+            <ul class="footer__nav-items">
+              <li class="footer__nav-list">
+                <a href="/" class="footer__nav-links">API</a>
+              </li>
+              <li class="footer__nav-list">
+                <a href="/" class="footer__nav-links">Documentation</a>
+              </li>
+            </ul>
+          </div>
+
+          <!--Nav-->
+          <div class="footer__nav">
+            <h3 class="footer__nav-title h3--nav-title">Company</h3>
+            <ul class="footer__nav-items">
+              <li class="footer__nav-list">
+                <a href="/" class="footer__nav-links">Career</a>
+              </li>
+              <li class="footer__nav-list">
+                <a href="/" class="footer__nav-links">Support</a>
+              </li>
+              <li class="footer__nav-list">
+                <a href="/" class="footer__nav-links">Culture</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer__credits">
+      <div class="row footer__flex">
+        <p class="footer__paragraph p--footer">&copy; Remix 2021</p>
+        <div>
+          <a href="/" class="footer__credits--link">support@remix.com</a>
+          <img src="../assets/Twitter.svg" alt="Check us out" />
+          <img src="../assets/Facebook.svg" alt="Check us out" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const blog_menu = document.querySelector(".header-blog__nav-items");
+      const blog_link = document.querySelectorAll("li > a.header-blog__link");
+      console.log(blog_link);
+      blog_menu.addEventListener("click", function (e) {
+        e.preventDefault();
+        const clicked = e.target.closest(".header-blog__link");
+
+        if (!clicked) return;
+
+        blog_link.forEach((el) => {
+          el.classList.remove("header-blog__link--active");
+        });
+        clicked.classList.add("header-blog__link--active");
+
+        console.log(clicked);
+      });
+    </script>
+  </body>
 </html>

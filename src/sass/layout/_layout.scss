@@ -1,14 +1,13 @@
 .row {
   width: 90%;
   margin: 0 auto;
-  max-width: 144rem;
+  max-width: 114rem;
 }
 
 .header {
   margin-bottom: 8rem;
- 
+
   &__img {
-    
     img {
       width: 100%;
     }
@@ -23,8 +22,6 @@
       padding: 0 0.8rem;
       display: inline-block;
     }
-
-   
   }
 
   &__paragraph {
@@ -45,303 +42,250 @@
       img {
         width: 100%;
         height: auto;
-        
       }
     }
   }
 }
 
-
 /**************************
 main
 ***************************/
-.section{
-  
-
+.section {
   //This will keep the images from the section to overlap
-  &--img{
+  &--img {
     width: 100%;
-    
   }
 
   /*
    intro
   */
 
-  &__intro{
+  &__intro {
     margin-bottom: 8rem;
 
-
-
-    @include responsive(tab-land){
+    @include responsive(tab-land) {
       display: flex;
       align-items: center;
     }
-    
-    .title--h2{
-     @include responsive(desktop){
-       width: 55%;
-     }
-     
+
+    .title--h2 {
+      @include responsive(desktop) {
+        width: 55%;
+      }
     }
 
-
-    &-paragraph{
+    &-paragraph {
       margin-bottom: $big-space;
 
-      @include responsive(tab-land){
+      @include responsive(tab-land) {
         width: 80%;
       }
-      @include responsive(desktop){
+      @include responsive(desktop) {
         width: 57%;
       }
     }
-    &-link{
+    &-link {
       text-decoration: solid;
       text-transform: capitalize;
       font-weight: 600;
       margin-bottom: $bigger-space;
       display: block;
-      
+
       &:link,
-      &:visited{
+      &:visited {
         color: var(--color-neutral-01);
-        
       }
     }
 
-    &--bottom{
-     
-     
-
-      @include responsive(tab-land){
+    &--bottom {
+      @include responsive(tab-land) {
         max-width: 51.4rem;
       }
     }
-
-    
-
-
   }
 
   /*
    TESTIMONIALS
   */
 
-  &__reviews{
+  &__reviews {
     margin-bottom: 3.2rem;
     display: flex;
     flex-direction: column;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
-    @include responsive(tablet){
+    @include responsive(tablet) {
       margin-bottom: 7.6rem;
-     }
+    }
 
-     @include responsive(tab-land){
-     flex-direction: row-reverse;
-     } 
-    
+    @include responsive(tab-land) {
+      flex-direction: row-reverse;
+    }
   }
 
-  &__reviews--top{
+  &__reviews--top {
     margin-bottom: 3.2rem;
     flex: 1;
     align-self: center;
-    
   }
-  
-  //Will set the box to flex so we can position them 
-  &__reviews--bottom{
+
+  //Will set the box to flex so we can position them
+  &__reviews--bottom {
     display: flex;
     flex-direction: column;
     flex: 1;
-    
   }
 
-  &__reviews-counter{
+  &__reviews-counter {
     display: flex;
     //vertical-align: middle;
   }
 
-  &__reviews-p{
+  &__reviews-p {
     margin-bottom: $medium-space;
   }
-
 
   /*
    SUBSCRIBE
   */
 
-  &__subscribe{
+  &__subscribe {
     background-color: var(--color-yllw);
-    padding-top: 6.4rem ;
-    @include responsive(tablet){
-      padding: 0;
+    padding-top: 6.4rem;
+  }
+
+  &__subscribe--bottom {
+    img {
+      transform: translateY(0.9rem);
     }
-    
   }
 
-  
-
-  &__subscribe--bottom{
-    
-   img{
-     transform: translateY(.9rem);
-   }
-  }
-
-  &__form{
+  &__form {
     margin-bottom: $bigger-space;
-    &>*{
+    & > * {
       display: block;
       width: 100%;
 
-      @include responsive(tablet){
+      @include responsive(tablet) {
         display: inline-block;
-       }
+      }
     }
-    & :first-child{
+    & :first-child {
       margin-bottom: $small-space;
       color: var(--color-yllw-02);
       padding: 1.8rem 0 1.8rem 3.6rem;
       border: none;
-      border-radius: .5rem;
-      
-      @include responsive(tablet){
+      border-radius: 0.5rem;
+
+      @include responsive(tablet) {
         margin: 0;
         width: 24.9rem;
         height: 5.9rem;
-       }
-     
+      }
     }
 
-    & :nth-child(2){
-     
-
-      @include responsive(tablet){
-        margin-left:$medium-space ;
+    & :nth-child(2) {
+      @include responsive(tablet) {
+        margin-left: $medium-space;
         width: 22rem;
         padding: 1.9rem 2.4rem;
-       }
+      }
     }
 
-    &-field::placeholder{
+    &-field::placeholder {
       color: var(--color-yllw-02);
-      opacity: .7;
+      opacity: 0.7;
       font-size: $medium-space;
-     
     }
-     
-    &-field:focus{
+
+    &-field:focus {
       outline: none;
     }
-    &-field:focus:invalid{
+    &-field:focus:invalid {
       border: 1px solid orangered;
     }
-
-
-
-
   }
-
-  
 }
 
 /**************************
 FOOTER
 ***************************/
 
-.footer{
+.footer {
   padding-top: 2rem;
   background-color: var(--color-yllw);
   color: var(--color-yllw-02);
 
-  @include responsive(tab-land){
+  @include responsive(tab-land) {
     display: flex;
   }
- 
 
-  &__text{
-   
+  &__text {
     width: 95%;
   }
 
-  &__logo{
+  &__logo {
     display: block;
     margin-bottom: $medium-space;
   }
-  
-  &__description{
-    margin-bottom: 3.6rem;
 
-    
+  &__description {
+    margin-bottom: 3.6rem;
   }
 
-  &__credits{
+  &__credits {
     width: 100%;
     background-color: var(--color-yllw-02);
     padding: 1rem 0;
-    
+
     color: var(--color-yllw);
 
-    &--link{
-      font-family: 'Inter', Helvetica, sans-serif;
-       font-size: $medium-space;
-       &:link,
-       &:visited{
-       color: inherit;
-     
-    }
+    &--link {
+      font-family: "Inter", Helvetica, sans-serif;
+      font-size: $medium-space;
+      &:link,
+      &:visited {
+        color: inherit;
+      }
     }
   }
 
-  &__navigation{
-    
-    font-family: 'Inter', Helvetica, sans-serif;
+  &__navigation {
+    font-family: "Inter", Helvetica, sans-serif;
     font-weight: 400;
-
-   
   }
 
-  &__nav{
-    
-
-    &-title{
-     
+  &__nav {
+    &-title {
       margin-bottom: $big-space;
     }
 
-    &-items{
+    &-items {
       margin-bottom: $big-space;
 
-      &>*:not(:last-child){
+      & > *:not(:last-child) {
         margin-bottom: $small-space;
       }
     }
 
-    &-links{
+    &-links {
       display: block;
       font-size: 1.8rem;
 
       &:visited,
-      &:link{
-        color:var(--color-yllw-02) ;
+      &:link {
+        color: var(--color-yllw-02);
       }
     }
   }
 
-
-
-  &__flex{
+  &__flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    div{
-      
-      
-      &>*:not(:first-child){
-        margin-left:$medium-space;
+    div {
+      & > *:not(:first-child) {
+        margin-left: $medium-space;
         display: inline-block;
         vertical-align: middle;
       }
@@ -349,69 +293,63 @@ FOOTER
   }
 }
 
-
 /***
 
 footer flex
 
 ***/
 
-.footer--flex{
-  @include responsive(desktop){
-    padding-top:4.8rem;
-  display: flex;
+.footer--flex {
+  @include responsive(desktop) {
+    padding-top: 4.8rem;
+    display: flex;
 
-  &>*{
-    flex: 1;
-  }
-}
-.footer__navigation{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  & > *{
-    flex: 1 0 50%;
-  }
- 
-  @include responsive(tablet){
-    & > *{
-      flex: 1 0;
+    & > * {
+      flex: 1;
     }
-    justify-content: space-between;
   }
+  .footer__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    & > * {
+      flex: 1 0 50%;
+    }
 
-}
+    @include responsive(tablet) {
+      & > * {
+        flex: 1 0;
+      }
+      justify-content: space-between;
+    }
+  }
 }
 
 /*
 That's for the sign up form
 */
 
-.flex--form{
-  @include responsive(tab-land){
+.flex--form {
+  @include responsive(tab-land) {
     display: flex;
-   
   }
 
   .p--section,
-  .title--h2{
-    
-    @include responsive(tablet){
+  .title--h2 {
+    @include responsive(tablet) {
       width: 90%;
     }
-    @include responsive(desktop){
+    @include responsive(desktop) {
       width: 47%;
     }
-    
   }
 
-  .section__subscribe--top{
-    margin:  0;
+  .section__subscribe--top {
+    margin: 0;
     align-self: center;
   }
 
-  .section__subscribe--bottom{
-   
+  .section__subscribe--bottom {
     max-width: 48.1rem;
     margin: 0 auto;
   }

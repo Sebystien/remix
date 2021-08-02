@@ -2,13 +2,12 @@
   padding: 2rem 0;
   justify-content: space-between;
   align-items: center;
-  
-  
-  @include responsive(tab-land){
+
+  @include responsive(tab-land) {
     padding: 4rem 0;
   }
 
-  @media (max-width: 1200px){
+  @media (max-width: 1140px) {
     position: relative;
   }
   /********
@@ -20,16 +19,16 @@
     align-items: center;
     justify-content: center;
     z-index: 20;
-    
+
     width: 5rem;
     border-radius: 20px;
-    padding: 1.6rem .8rem;
+    padding: 1.6rem 0.8rem;
 
     &::selection > * {
       background: transparent;
     }
-    
-    @include responsive(tab-land){
+
+    @include responsive(tab-land) {
       display: none;
     }
   }
@@ -41,7 +40,6 @@
   &__icon {
     position: relative;
     width: 100%;
-    
 
     &,
     &::before,
@@ -91,34 +89,30 @@
 ************/
 
   &__navigation {
-      display: flex;
-      flex: 1;
-      overflow-x: hidden;
- 
-    @media (max-width: 1200px){
-      
+    display: flex;
+    flex: 1;
+    overflow-x: hidden;
+
+    @media (max-width: 1140px) {
       flex-direction: column;
       align-items: center;
       position: absolute;
       top: 6rem;
       right: 0;
       width: 0;
-      
+
       background-color: var(--color-neutral-00);
       z-index: 20;
-      transition: all .3s;
-      
+      transition: all 0.3s;
     }
   }
 
   &__navigation li {
     margin-left: $big-space;
-  
-    @media (max-width: 1200px){
-    
-    
-     display: block;
-     margin: 4rem 0;
+
+    @media (max-width: 1140px) {
+      display: block;
+      margin: 4rem 0;
     }
   }
 
@@ -132,30 +126,23 @@
       text-transform: capitalize;
       display: block;
     }
+
+    &--login {
+      margin: 0 2.4rem;
+    }
   }
 
-  //Background
-  &__bg{
-    display: none;
-    background: lightblue;
-    width: 100%;
-    height:100%;
-    
-  // transform: scale(1000);
-   z-index: 1;
-  }
-  
   /********
 #### Actions icon and BTN
 ************/
   &__actions {
     display: none;
-    background-color: aliceblue;
+
     @include responsive(tab-land) {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex: 1;
+      //flex: 1;
     }
   }
 
@@ -164,13 +151,9 @@
 ************/
 }
 
-@media (max-width: 1200px){
-  .nav__active{
-    
+@media (max-width: 1200px) {
+  .nav__active {
     right: 0;
     width: 100%;
-    
   }
-
-  
 }

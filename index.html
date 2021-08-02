@@ -14,20 +14,6 @@
   </head>
   <body data-color="light">
 
-    <div class="nav__toggle toggle">
-      <input type="checkbox" id="toggle" class="toggle__input" />
-      <label for="toggle" class="toggle__switch">
-        
-        <span> <img src="./src/assets/Light.svg" alt="Light" /> Light </span>
-        <span>
-          <img src=".src/assets/moon.svg" alt="" />
-          Dark
-        </span>
-      </label>
-    </div>
-
-
-
     <nav class="nav row flex">
       <!--Nav logo-->
       <div class="nav__logo">
@@ -53,14 +39,21 @@
 
       <div class="nav__actions">
         <!--Nav switch-->
-
+       <div class="nav__toggle toggle">
+      <input type="checkbox" id="toggle" class="toggle__input" />
+      <label for="toggle" class="toggle__switch">
+        
+        <span> <img src="./src/assets/sun.svg" alt="Light" /> Light </span>
+        <span> <img src="./src/assets/moonlight.svg" alt="Moon" /> Dark</span>
+      </label>
+    </div>
      
         <!--Nav CTAS-->
-        <a href="#" class="nav__login nav__links">Sign in</a>
-        <button type="button" class="btn btn--yellow">
+        <a href="#" class="nav__login nav__links nav__links--login">Sign in</a>
+        <a href = "./src/html/signup.html"  class="btn btn--yellow cta">
           <img src="./src/assets/figma-logo.svg" alt="Get the plugin" /> Get figma
           plugin
-        </button>
+        </a>
       </div>
     </nav>
 
@@ -82,10 +75,10 @@
           click, and export your assets effortlessly.
         </p>
 
-        <button href="./src/html/signup.html" class="btn btn--yellow">
+        <a href="./src/html/signup.html" class="btn btn--yellow cta">
           <img src="./src/assets/figma-logo.svg" alt="Get the plugin" /> Get figma
           plugin
-        </button>
+        </a>
       </div>
     </header>
 
@@ -358,14 +351,7 @@
       </div>
     </div>
 
-    <a href="./src/html/signup.html">This is the page</a>
-<!--Sign up
-    <svg class="figma">
-      <use
-        xlink:href="images/sprite.svg#facebook"
-        href="./src/sprite.svg#figma"
-      ></use>
-    </svg>-->
+    
     <script src="./src/js/app.js"></script>
   </body>
 </html>

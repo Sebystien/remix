@@ -1,5 +1,5 @@
 //@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Source+Sans+Pro:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Source+Sans+Pro:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 /*
 This is where we will find all the font related styling
 */
@@ -14,7 +14,6 @@ body {
   font-size: 1.8rem;
   color: var(--color-text);
   background: var(--color-bg);
-  
 }
 
 p,
@@ -25,7 +24,8 @@ span {
 h1,
 h2,
 h3,
-button {
+button,
+.cta {
   font-family: "Space Grotesk";
 }
 
@@ -33,42 +33,38 @@ h1,
 h2,
 h3 {
   line-height: 1.2;
- 
+
   font-weight: 700;
 }
 
-h1{
+h1 {
   color: var(--color-neutral-01);
 }
 
-
 .title {
   &--h1 {
-    
     font-size: 4.6rem;
-    @include responsive(tab-land){
+    @include responsive(tab-land) {
       font-size: 5.6rem;
     }
   }
-  &--h2{
+  &--h2 {
     color: var(--color-neutral-01);
     font-size: 3.6rem;
-
   }
 }
 
 //Those are h2 elements
-.section__title{
+.section__title {
   margin-bottom: $small-space;
 }
 
-.link{
+.link {
   font-family: "Source Sans Pro";
 }
 
-.p{
-
-  &--section-subs{
+.p {
+  &--section-subs {
     color: var(--color-yllw-02);
     margin-bottom: $medium-space;
     width: 100%;
