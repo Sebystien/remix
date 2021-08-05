@@ -19,30 +19,43 @@ $bigger-space: 3.2rem;
 
   --color-neutral-00: hsl(0, 0%, 100%);
   --color-neutral-01: hsl(0, 0%, 0%);
-  --color-neutral-02: hsl(235, 9%, 29%);
+  --color-neutral-02: hsl(236, 9%, 29%);
+  --color--neutral-02-a: hsl(235, 9%, 28%);
   --color-neutral-03: hsl(220, 20%, 97%);
   --color-neutral-04: hsl(223, 7%, 79%);
+  --color-neutral-05: hsl(215, 5%, 46%);
 
   --color-text: hsl(0, 0%, 35%);
-
+  --color-modal-text: var(--color-text);
   /*
   * COLOR ELEMENT
   */
-  --color-btn: hsl(0, 0%, 0%);
+  --color-btn: var(--color-neutral-01);
   --color-switch-bg: hsl(220, 18%, 97%);
-  --color-boxes: hsl(220, 18%, 97%);
+  --color-boxes: hsl(220, 20%, 97%);
+  --color-boxes-1: var(--color-boxes);
+  --color-selection: hsl(207, 62%, 58%);
 
+  //Modal btn color
+  --color-previous: var(--color-neutral-01);
+  //Small back btn
+  --color-btn-back: var(--color-btn);
+
+  //Font
   --font-medium: 500;
   --font-bold: 700;
 }
 
 [data-color="dark"] {
   --color-bg: hsl(223, 10%, 13%);
+  --color-neutral-05: hsl(223, 03%, 80%);
 
   /*
   * COLOR TEXT 
   */
   --color-text: hsl(0, 0%, 64%);
+  --color-neutral-01: hsl(0, 0%, 100%);
+  --color-modal-text: hsl(223, 7%, 79%);
 
   /*
   * COLOR ELEMENT  
@@ -50,5 +63,8 @@ $bigger-space: 3.2rem;
 
   --color-switch-bg: hsl(0, 0%, 0%);
   --color-boxes: var(--color-neutral-02);
-  --color-neutral-01: hsl(0, 0%, 100%);
+  --color-boxes-1: var(--color--neutral-02-a);
+  --color-btn-back: var(--color-boxes-1);
+
+  --color-previous: var(--color-yllw);
 }

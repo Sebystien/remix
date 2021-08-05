@@ -1,5 +1,24 @@
+.top {
+  &__flex {
+    display: flex;
+    align-items: center;
+  }
+  &__text {
+    font-family: "Space Grotesk";
+    font-size: 2rem;
+    font-weight: var(--font-bold);
+    display: none;
+    margin-left: 1.6rem;
+    color: var(--color-neutral-01);
+
+    @include responsive(phone) {
+      display: block;
+    }
+  }
+}
+
 .modal {
-  background: #ccc;
+  background: var(--color-boxes-1);
   padding: 3.2rem;
   font-size: 1.8rem;
   border-radius: 5px;
@@ -16,6 +35,7 @@
     font-family: "Space Grotesk";
     font-weight: 400;
     font-size: 2rem;
+    color: var(--color-neutral-05);
   }
 
   &__title {
@@ -24,6 +44,8 @@
     font-weight: var(--font-bold);
     width: 70%;
     margin: auto;
+
+    color: var(--color-neutral-01);
   }
 
   &__description {
@@ -31,6 +53,7 @@
     margin: auto;
     font-weight: 400;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
+    color: var(--color-modal-text);
 
     @include responsive(phone) {
       width: 70%;
@@ -113,6 +136,7 @@
     margin: 0 auto;
     width: 80%;
     text-align: center;
+    color: var(--color-neutral-05);
   }
 
   //This is for the tab
@@ -132,6 +156,11 @@
   &__title {
     font-weight: var(--font-bold);
     font-family: "Space Grotesk";
+    color: hsl(0, 0%, 0%);
+  }
+
+  &__box--info {
+    color: hsl(0, 0%, 35%);
   }
   &__top {
     display: flex;
@@ -144,7 +173,7 @@
   &__custom-input {
     width: 1.8rem;
     height: 1.8rem;
-    border: 1px solid black;
+    border: 1px solid hsl(0, 0%, 82%);
     border-radius: 50%;
     overflow: hidden;
     display: grid;
@@ -179,9 +208,9 @@
       width: 100%;
       height: 100%;
       background: transparent;
-      border: 1px solid blue;
+      border: 2px solid var(--color-selection);
       border-radius: 0.5rem;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.1s ease-out;
     }
   }
 }

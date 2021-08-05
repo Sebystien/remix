@@ -75,6 +75,7 @@
   &--previous {
     background: transparent;
     margin-bottom: 1.6rem;
+    color: var(--color-previous);
 
     @include responsive(tablet) {
       margin-bottom: 0;
@@ -90,7 +91,7 @@
   }
 
   &--back {
-    background: black;
+    background: var(--color-btn-back);
     width: 4.2rem;
     height: 4.2rem;
     border: none;

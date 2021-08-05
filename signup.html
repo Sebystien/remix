@@ -7,24 +7,33 @@
 
     <title>Remix | Sign up</title>
 
-    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="./src/css/style.css" type="text/css" />
   </head>
 
   <body data-color="light">
     <div class="row">
       <div class="top">
-        <a href="/index.html" class="btn--back"
-          ><img src="../assets/back-arrow.svg" alt="homepage" />
-        </a>
+        <div class="top__flex">
+          <a href="/index.html" class="btn--back"
+            ><img src="./src/assets/back-arrow.svg" alt="back homepage" />
+          </a>
+          <span class="top__text">Back to homepage</span>
+        </div>
 
+        <!--
+          ############## TOGGLE ###################
+        -->
         <div class="nav__toggle toggle">
           <input type="checkbox" id="toggle" class="toggle__input" />
           <label for="toggle" class="toggle__switch">
-            <span> <img src="../assets/Light.svg" alt="Light" /> Light </span>
             <span>
-              <img src="../assets/moonlight.svg" alt="" />
-              Dark
+              <img src="./src/assets/sun-white.svg" alt="Light" class="sun" />
+              Light
             </span>
+            <span>
+              <img src="./src/assets/moon-white.svg" alt="Moon" class="moon" />
+              Dark</span
+            >
           </label>
         </div>
       </div>
@@ -34,7 +43,7 @@
       <div class="modal">
         <div class="modal__header">
           <div class="modal__logo">
-            <img src="../assets/logo-white.svg" alt="Remix" />
+            <img src="./src/assets/logo-white.svg" alt="Remix" class="logo" />
           </div>
           <h2 class="modal__pagination">
             Steps <span class="modal__steps-number"> 1</span>/<span
@@ -67,11 +76,11 @@
                 />
                 <div class="label__border"></div>
                 <span class="label__custom-input">
-                  <img src="../assets/Checkmark-blue.svg" alt="Select" />
+                  <img src="./src/assets/Checkmark-blue.svg" alt="Select" />
                 </span>
               </span>
 
-              <p class="form__info">I'm using this for a team of <2.</p>
+              <p class="label__box--info">I'm using this for a team of <2.</p>
             </label>
 
             <label for="select-2" class="label modal__selection">
@@ -86,11 +95,11 @@
                 />
                 <div class="label__border"></div>
                 <span class="label__custom-input">
-                  <img src="../assets/Checkmark-blue.svg" alt="Select" />
+                  <img src="./src/assets/Checkmark-blue.svg" alt="Select" />
                 </span>
               </span>
 
-              <p class="form__info">I’m using this for a team of >2.</p>
+              <p class="label__box--info">I’m using this for a team of >2.</p>
             </label>
           </form>
 
@@ -115,8 +124,8 @@
             </p>
           </div>
           <button type="button" class="btn btn--modal-figma btn--yellow">
-            <img src="../assets/figma-logo.svg" alt="Link your account" /> Link
-            Figma Account
+            <img src="./src/assets/figma-logo.svg" alt="Link your account" />
+            Link Figma Account
           </button>
 
           <div class="btn-group">
@@ -146,7 +155,7 @@
               required
             />
             <button type="submit" class="btn btn--modal-send btn--yellow">
-              <img src="../assets/Send.svg" alt="Send Code" />Send code
+              <img src="./src/assets/Send.svg" alt="Send Code" />Send code
             </button>
           </form>
 
@@ -158,6 +167,7 @@
         <p class="modal__copyright">© 2021 Remix. All Rights Reserved.</p>
       </div>
     </div>
-    <script src="../js/modal.js"></script>
+    <script src="./src/js/modal.js"></script>
+    <script src="./src/js/switch.js"></script>
   </body>
 </html>

@@ -12,31 +12,43 @@ to switch up the theme
   --color-bg: hsl(0, 0%, 100%);
   --color-neutral-00: hsl(0, 0%, 100%);
   --color-neutral-01: hsl(0, 0%, 0%);
-  --color-neutral-02: hsl(235, 9%, 29%);
+  --color-neutral-02: hsl(236, 9%, 29%);
+  --color--neutral-02-a: hsl(235, 9%, 28%);
   --color-neutral-03: hsl(220, 20%, 97%);
   --color-neutral-04: hsl(223, 7%, 79%);
+  --color-neutral-05: hsl(215, 5%, 46%);
   --color-text: hsl(0, 0%, 35%);
+  --color-modal-text: var(--color-text);
   /*
   * COLOR ELEMENT
   */
-  --color-btn: hsl(0, 0%, 0%);
+  --color-btn: var(--color-neutral-01);
   --color-switch-bg: hsl(220, 18%, 97%);
-  --color-boxes: hsl(220, 18%, 97%);
+  --color-boxes: hsl(220, 20%, 97%);
+  --color-boxes-1: var(--color-boxes);
+  --color-selection: hsl(207, 62%, 58%);
+  --color-previous: var(--color-neutral-01);
+  --color-btn-back: var(--color-btn);
   --font-medium: 500;
   --font-bold: 700; }
 
 [data-color="dark"] {
   --color-bg: hsl(223, 10%, 13%);
+  --color-neutral-05: hsl(223, 03%, 80%);
   /*
   * COLOR TEXT 
   */
   --color-text: hsl(0, 0%, 64%);
+  --color-neutral-01: hsl(0, 0%, 100%);
+  --color-modal-text: hsl(223, 7%, 79%);
   /*
   * COLOR ELEMENT  
   */
   --color-switch-bg: hsl(0, 0%, 0%);
   --color-boxes: var(--color-neutral-02);
-  --color-neutral-01: hsl(0, 0%, 100%); }
+  --color-boxes-1: var(--color--neutral-02-a);
+  --color-btn-back: var(--color-boxes-1);
+  --color-previous: var(--color-yllw); }
 
 /*Breakpoint
 $breakpoint: (
@@ -182,7 +194,8 @@ h1 {
         max-width: 22rem; } }
   .btn--previous {
     background: transparent;
-    margin-bottom: 1.6rem; }
+    margin-bottom: 1.6rem;
+    color: var(--color-previous); }
     @media (min-width: 43.625rem) {
       .btn--previous {
         margin-bottom: 0; } }
@@ -192,7 +205,7 @@ h1 {
       .btn--next {
         margin: 0; } }
   .btn--back {
-    background: black;
+    background: var(--color-btn-back);
     width: 4.2rem;
     height: 4.2rem;
     border: none;
@@ -430,8 +443,23 @@ h1 {
     transform: translateX(10rem);
     background: #494a50; }
 
+.top__flex {
+  display: flex;
+  align-items: center; }
+
+.top__text {
+  font-family: "Space Grotesk";
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+  display: none;
+  margin-left: 1.6rem;
+  color: var(--color-neutral-01); }
+  @media (min-width: 40rem) {
+    .top__text {
+      display: block; } }
+
 .modal {
-  background: #ccc;
+  background: var(--color-boxes-1);
   padding: 3.2rem;
   font-size: 1.8rem;
   border-radius: 5px;
@@ -449,18 +477,21 @@ h1 {
   .modal__pagination {
     font-family: "Space Grotesk";
     font-weight: 400;
-    font-size: 2rem; }
+    font-size: 2rem;
+    color: var(--color-neutral-05); }
   .modal__title {
     font-family: "Space Grotesk";
     font-size: 1.8rem;
     font-weight: var(--font-bold);
     width: 70%;
-    margin: auto; }
+    margin: auto;
+    color: var(--color-neutral-01); }
   .modal__description {
     width: 90%;
     margin: auto;
     font-weight: 400;
-    font-family: "Source Sans Pro", Helvetica, sans-serif; }
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    color: var(--color-modal-text); }
     @media (min-width: 40rem) {
       .modal__description {
         width: 70%; } }
@@ -512,7 +543,8 @@ h1 {
   .modal__copyright {
     margin: 0 auto;
     width: 80%;
-    text-align: center; }
+    text-align: center;
+    color: var(--color-neutral-05); }
   .modal__steps {
     display: none; }
     .modal__steps--active {
@@ -526,7 +558,10 @@ h1 {
     */ }
   .label__title {
     font-weight: var(--font-bold);
-    font-family: "Space Grotesk"; }
+    font-family: "Space Grotesk";
+    color: black; }
+  .label__box--info {
+    color: #595959; }
   .label__top {
     display: flex;
     justify-content: space-between;
@@ -536,7 +571,7 @@ h1 {
   .label__custom-input {
     width: 1.8rem;
     height: 1.8rem;
-    border: 1px solid black;
+    border: 1px solid #d1d1d1;
     border-radius: 50%;
     overflow: hidden;
     display: grid;
@@ -558,9 +593,9 @@ h1 {
       width: 100%;
       height: 100%;
       background: transparent;
-      border: 1px solid blue;
+      border: 2px solid var(--color-selection);
       border-radius: 0.5rem;
-      transition: all 0.3s ease-in-out; } }
+      transition: all 0.1s ease-out; } }
 
 @media (min-width: 43.625rem) {
   .btn-group {
